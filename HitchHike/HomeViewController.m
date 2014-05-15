@@ -101,6 +101,7 @@
 #pragma mark - App Delegate Methods
 -(void) enteringBackground
 {
+    
     [LocationCache saveLocations:self.aLocationCache];
     
 }//end - enteringBackground -  method
