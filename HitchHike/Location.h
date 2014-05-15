@@ -28,8 +28,6 @@
 @property(strong, nonatomic) UIImage *locationImage;
 
 
-
-
 //Methods:
 
 //NSCoding ----------------------------------
