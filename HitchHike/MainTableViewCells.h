@@ -11,25 +11,16 @@
 
 @interface MainTableViewCells : PFTableViewCell
 
-//Attributes
+//Attributes:
 
-//////////////////
-//IBOlets:
+//IBOutlets ----------------------------------
+
+//UIImageView - Image for Cell - Image of Each Location
 @property (strong, nonatomic) IBOutlet UIImageView *locationImage;
+
+//UILabel - Label for Cell - Name of Each Cell
 @property (strong, nonatomic) IBOutlet UILabel *locationInfo;
 
 
-
-
-
-
-
-
-
-
-//////////////////
-//IBActions:
-
-//IBActions-Buttons
 
 @end

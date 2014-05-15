@@ -29,7 +29,6 @@
 		811AF6C719245DCE00B0F19F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811AF6C619245DCE00B0F19F /* Security.framework */; };
 		811AF6C919245DD600B0F19F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811AF6C819245DD600B0F19F /* StoreKit.framework */; };
 		811AF6CB19245DDF00B0F19F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811AF6CA19245DDF00B0F19F /* SystemConfiguration.framework */; };
-		811AF6CF19245ECC00B0F19F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 811AF6CE19245ECC00B0F19F /* MainStoryboard.storyboard */; };
 		811AF6D519245F2F00B0F19F /* LocationCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 811AF6D419245F2F00B0F19F /* LocationCache.m */; };
 		811AF6D919245F6800B0F19F /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 811AF6D819245F6800B0F19F /* Location.m */; };
 		811AF6DD19245FA900B0F19F /* placeHolder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 811AF6DC19245FA900B0F19F /* placeHolder.jpg */; };
@@ -75,7 +74,6 @@
 		811AF6C619245DCE00B0F19F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		811AF6C819245DD600B0F19F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		811AF6CA19245DDF00B0F19F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		811AF6CE19245ECC00B0F19F /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		811AF6D319245F2F00B0F19F /* LocationCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationCache.h; sourceTree = "<group>"; };
 		811AF6D419245F2F00B0F19F /* LocationCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationCache.m; sourceTree = "<group>"; };
 		811AF6D719245F6800B0F19F /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
@@ -215,8 +213,8 @@
 		811AF6CD19245EA400B0F19F /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				811AF6DA19245F8B00B0F19F /* HomeViewController */,
 				811AF6D019245EE800B0F19F /* Storyboard */,
+				811AF6DA19245F8B00B0F19F /* HomeViewController */,
 			);
 			name = Interface;
 			sourceTree = "<group>";
@@ -224,7 +222,6 @@
 		811AF6D019245EE800B0F19F /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				811AF6CE19245ECC00B0F19F /* MainStoryboard.storyboard */,
 				811AF6E61924618A00B0F19F /* Storyboard.storyboard */,
 			);
 			name = Storyboard;
@@ -368,7 +365,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				811AF6CF19245ECC00B0F19F /* MainStoryboard.storyboard in Resources */,
 				811AF6DD19245FA900B0F19F /* placeHolder.jpg in Resources */,
 				811AF69219245CF000B0F19F /* InfoPlist.strings in Resources */,
 				811AF69A19245CF000B0F19F /* Images.xcassets in Resources */,
