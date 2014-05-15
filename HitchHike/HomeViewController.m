@@ -68,10 +68,7 @@
      selector:@selector(enteringForeground)
      name:UIApplicationWillEnterForegroundNotification
      object:nil];
-    
-    //Initilizing the TableView from parse when the view loads
-    [self performSelector:@selector(loadingLocationsFromParse) ];
-    
+
     //Populating the TableView with the elements from parse
     [self loadObjects];
     
@@ -81,10 +78,14 @@
     if (self.aLocationCache == nil)
     {
         self.tempLocationCache = [[NSArray alloc] init];
+        self.aLocationCache = [[LocationCache alloc]init];
     }
     else // if the cache is not empty, then use the elements that are in the cache currently
         self.tempLocationCache = [[NSArray alloc]
                                   initWithArray:self.aLocationCache.cachedLocations];
+    
+    //Caching the elements sent from Parse
+    [self performSelector:@selector(loadingLocationsFromParse) ];
   
     
     
@@ -200,46 +201,25 @@
 {
     //Creating Parse Object from the Locations Class
     PFQuery *locationsFromParse = [PFQuery queryWithClassName:@"Locations"];
+    self.locations = [locationsFromParse findObjects];
     
-    [locationsFromParse findObjectsInBackgroundWithBlock:^(NSArray *Objects, NSError *error)
-     {
-         if(!error)
-         {
-             //Initalzing a temporary array named locations to retrieve the Array of
-             //NSDictionaries from Parse
-             self.locations = [[NSArray alloc]initWithArray:Objects];
-             
-             self.aLocation = [Location new];
-             
-             for (PFObject *parseObject in Objects)
-             {
-                 //initializing a new location object
-                  self.aLocation = [Location new];
-                 
-                 //Stroing the Attributes from parse into temporary variables
-                 self.aLocation.locationName = [parseObject objectForKey:@"locationName"];
-                 
-                 //Parsing the PFFIle into an image for the "location image attribute
-                 PFFile *tempImageFromFile = [parseObject objectForKey:@"locationImage"];//storing as a file
-                 NSData *tempImageFromData = [[NSData alloc]initWithData:[tempImageFromFile getData]];//parsing into data
-                 self.aLocation.locationImage = [UIImage imageWithData:tempImageFromData]; // storing as a UIImage
-                 
-                 [self appendToLocationCache:self.aLocation];
-                 
-                 
-             }//end - for loop
-  
-         }//end - if Statement
-         
-         else
-         {
-             //ERROR
-             
-         }//end - else Statement
-         
-         
-     }]; //end - locationsFromParse - block
-
+    //Iterating over the array of PFObjects retrieved from parse
+    for (PFObject *parseObject in self.locations)
+    {
+        //initializing a new location object
+        self.aLocation = [Location new];
+        
+        //Stroing the Attributes from parse into temporary variables
+        self.aLocation.locationName = [parseObject objectForKey:@"locationName"];
+        
+        //Parsing the PFFIle into an image for the "location image attribute
+        PFFile *tempImageFromFile = [parseObject objectForKey:@"locationImage"];//storing as a file
+        NSData *tempImageFromData = [[NSData alloc]initWithData:[tempImageFromFile getData]];//parsing into data
+        self.aLocation.locationImage = [UIImage imageWithData:tempImageFromData]; // storing as a UIImage
+        
+        [self appendToLocationCache:self.aLocation];
+        
+    }//end - for loop
     
 }//end - populateMainTableView -  method
 
@@ -255,9 +235,23 @@
     
     //storing the newly added elements into the temporary Location cache
     self.tempLocationCache = tempArray2;
+    self.aLocationCache.cachedLocations = self.tempLocationCache;
     
     //Caching the array of attributes from Parse
-    [self cacheLocationAttributesFromParse];
+    [LocationCache saveLocations:self.aLocationCache];
+    
+}
+-(void)appendToLocationWithoutCache:(Location*)aLocationObject;
+{
+    
+    //Creating temporary variables to append to the locations cache
+    NSArray* tempArray = [[NSArray alloc] initWithObjects:self.aLocation, nil];
+    
+    //adding the newly loaded locations into the locations cache
+    NSArray *tempArray2 = [self.tempLocationCache arrayByAddingObjectsFromArray:tempArray];
+    
+    //storing the newly added elements into the temporary Location cache
+    self.tempLocationCache = tempArray2;
     
 }
 
@@ -269,11 +263,16 @@
         self.aLocationCache = [[LocationCache alloc] initWithArray:self.tempLocationCache];
     }
     else
+    {
         self.aLocationCache.cachedLocations =  [self.aLocationCache.cachedLocations
                                                 arrayByAddingObjectsFromArray:self.tempLocationCache];
+        //saving the location object to file
+        [LocationCache saveLocations:self.aLocationCache];
+        
+    }
     
-    //saving the location object to file
-   [LocationCache saveLocations:self.aLocationCache];
+    
+   
     
 }//end - cacheLocationAttributesFromParse -  method
 

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Location : NSObject
+@interface Location : NSObject<NSCoding>
 
 //Attributes:
 
@@ -31,6 +31,14 @@
 
 
 //Methods:
+
+//NSCoding ----------------------------------
+//NSCoding - Caching - getPathToArchive Method
++(NSString *)getPathToArchive;
+//NSCoding - Cachine - decodes a location from memeory for loading
+-(id)initWithCoder:(NSCoder *)aDecoder;
+//NSCoding - Caching - encodes a location into memory for storage
+-(void)encodeWithCoder:(NSCoder *)anEncoder;
 
 
 

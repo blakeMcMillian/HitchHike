@@ -24,10 +24,10 @@
     
     if(self)
     {
-        self.cachedLocations = locationsArray;
+        self.cachedLocations = [[NSArray alloc]initWithArray:locationsArray];
         
         //saving the location object following instantination
-        //[LocationCache saveLocations:self];
+        [LocationCache saveLocations:self];
         
     }//end - if statement
     
@@ -53,7 +53,6 @@
 -(void)encodeWithCoder:(NSCoder *)anEncoder;
 {
     //Storing the objects
-    
     [anEncoder encodeObject:self.cachedLocations forKey:@"locations"];
     
 }//end - encodeWithCoder -  method
@@ -61,12 +60,11 @@
 +(NSString *)getPathToArchive
 {
     //finding and retrieving the path of the object that is being stored via NSCoding
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory,
-                                                         NSUserDomainMask,
-                                                         YES);
-    NSString *documentDirectory = [paths objectAtIndex:0];
+     NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     
-    NSString *archivePath = [documentDirectory stringByAppendingPathComponent:@"locationCache.model"];
+    NSString *documentDirectory = [path objectAtIndex:0];
+    
+    NSString *archivePath = [documentDirectory stringByAppendingPathComponent:@"locations"];
     
     //returning the object
     return archivePath;
@@ -75,7 +73,7 @@
 
 +(void)saveLocations:(LocationCache *)locations
 {
-    [NSKeyedArchiver archiveRootObject:locations toFile:[LocationCache getPathToArchive]];
+    [NSKeyedArchiver archiveRootObject:locations toFile:[self getPathToArchive]];
     
 }//end - saveaLocation - method
 
@@ -83,7 +81,7 @@
 {
     //loading a loading model
     
-    LocationCache *temp = [NSKeyedUnarchiver unarchiveObjectWithFile:[LocationCache getPathToArchive]];
+    LocationCache *temp = [NSKeyedUnarchiver unarchiveObjectWithFile:[self getPathToArchive]];
     
     return temp;
     

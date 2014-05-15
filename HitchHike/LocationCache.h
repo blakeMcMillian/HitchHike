@@ -33,7 +33,7 @@
 //NSCoding - Caching - getPathToArchive Method
 +(NSString *)getPathToArchive;
 //NSCoding - Cachine - decodes a location from memeory for loading
--(LocationCache *)initWithCoder:(NSCoder *)aDecoder;
+-(id)initWithCoder:(NSCoder *)aDecoder;
 //NSCoding - Caching - encodes a location into memory for storage
 -(void)encodeWithCoder:(NSCoder *)anEncoder;
 //NSCoding - Caching - Saves a location into memory

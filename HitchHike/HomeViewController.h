@@ -31,6 +31,7 @@
 //LocationsCache - Array of Locations- Caches locations
 @property(strong, nonatomic) NSArray *tempLocationCache;
 
+
 //Array ----------------------------------
 
 
@@ -66,6 +67,8 @@
 -(void)cacheLocationAttributesFromParse;
 //Locations - Caching - appending elements to the location cache
 -(void)appendToLocationCache:(Location*)aLocationObject;
+//Locations - Without Caching - appending elements to the location array
+-(void)appendToLocationWithoutCache:(Location*)aLocationObject;
 
 
 
