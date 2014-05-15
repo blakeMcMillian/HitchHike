@@ -35,6 +35,9 @@
 		811AF6E119245FD100B0F19F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811AF6E019245FD100B0F19F /* HomeViewController.m */; };
 		811AF6E519245FF200B0F19F /* MainTableViewCells.m in Sources */ = {isa = PBXBuildFile; fileRef = 811AF6E419245FF200B0F19F /* MainTableViewCells.m */; };
 		811AF6E71924618A00B0F19F /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 811AF6E61924618A00B0F19F /* Storyboard.storyboard */; };
+		811AF6ED192537C100B0F19F /* menuBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 811AF6EC192537C100B0F19F /* menuBar.png */; };
+		811AF6F219253AB900B0F19F /* searchButton1.png in Resources */ = {isa = PBXBuildFile; fileRef = 811AF6F019253AB900B0F19F /* searchButton1.png */; };
+		811AF6F319253AB900B0F19F /* searchButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = 811AF6F119253AB900B0F19F /* searchButton2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,9 @@
 		811AF6E319245FF200B0F19F /* MainTableViewCells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCells.h; sourceTree = "<group>"; };
 		811AF6E419245FF200B0F19F /* MainTableViewCells.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCells.m; sourceTree = "<group>"; };
 		811AF6E61924618A00B0F19F /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		811AF6EC192537C100B0F19F /* menuBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuBar.png; sourceTree = "<group>"; };
+		811AF6F019253AB900B0F19F /* searchButton1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchButton1.png; sourceTree = "<group>"; };
+		811AF6F119253AB900B0F19F /* searchButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchButton2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,7 +273,8 @@
 		811AF6DB19245FA100B0F19F /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				811AF6DC19245FA900B0F19F /* placeHolder.jpg */,
+				811AF6E9192533D700B0F19F /* View */,
+				811AF6E8192533C600B0F19F /* TableViewCells */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -288,6 +295,24 @@
 				811AF6E419245FF200B0F19F /* MainTableViewCells.m */,
 			);
 			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		811AF6E8192533C600B0F19F /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				811AF6DC19245FA900B0F19F /* placeHolder.jpg */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		811AF6E9192533D700B0F19F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				811AF6F019253AB900B0F19F /* searchButton1.png */,
+				811AF6F119253AB900B0F19F /* searchButton2.png */,
+				811AF6EC192537C100B0F19F /* menuBar.png */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,9 +390,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				811AF6F319253AB900B0F19F /* searchButton2.png in Resources */,
+				811AF6ED192537C100B0F19F /* menuBar.png in Resources */,
 				811AF6DD19245FA900B0F19F /* placeHolder.jpg in Resources */,
 				811AF69219245CF000B0F19F /* InfoPlist.strings in Resources */,
 				811AF69A19245CF000B0F19F /* Images.xcassets in Resources */,
+				811AF6F219253AB900B0F19F /* searchButton1.png in Resources */,
 				811AF6E71924618A00B0F19F /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
