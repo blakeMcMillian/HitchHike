@@ -28,9 +28,7 @@
         self.locationName = [aDecoder decodeObjectForKey:@"locationName"];
         self.locationImage = [aDecoder decodeObjectForKey:@"locationName"];
         
-        
     }//end - if statement
-    
     
     //returning the object
     return self;
