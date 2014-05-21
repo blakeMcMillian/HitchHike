@@ -17,6 +17,9 @@
 //NSString - NSString Object - Location's Name
 @property(strong, nonatomic) NSString *locationName;
 
+//NSString - NSString Object - Location's Name
+@property(strong, nonatomic) NSString *objectID;
+
 //PFObject ---------------------------------------
 
 //PFObject - Array of PFObject's Object - cache of locations from parse

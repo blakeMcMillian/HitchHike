@@ -17,7 +17,6 @@
 //Locations - Array of Location Object's - Contains Locations from Parse
 @property (strong,nonatomic) NSArray *cachedLocations;
 
-
 //Methods:
 
 //Initilizers ----------------------------------
@@ -27,7 +26,6 @@
 
 //Initilizers - Default initilizer - creates a new object
 -(id)init;
-
 
 //NSCoding ----------------------------------
 //NSCoding - Caching - getPathToArchive Method

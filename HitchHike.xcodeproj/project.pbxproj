@@ -32,12 +32,14 @@
 		811AF6D519245F2F00B0F19F /* LocationCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 811AF6D419245F2F00B0F19F /* LocationCache.m */; };
 		811AF6D919245F6800B0F19F /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 811AF6D819245F6800B0F19F /* Location.m */; };
 		811AF6DD19245FA900B0F19F /* placeHolder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 811AF6DC19245FA900B0F19F /* placeHolder.jpg */; };
-		811AF6E119245FD100B0F19F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811AF6E019245FD100B0F19F /* HomeViewController.m */; };
+		811AF6E119245FD100B0F19F /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811AF6E019245FD100B0F19F /* HomeTableViewController.m */; };
 		811AF6E519245FF200B0F19F /* MainTableViewCells.m in Sources */ = {isa = PBXBuildFile; fileRef = 811AF6E419245FF200B0F19F /* MainTableViewCells.m */; };
 		811AF6E71924618A00B0F19F /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 811AF6E61924618A00B0F19F /* Storyboard.storyboard */; };
 		811AF6ED192537C100B0F19F /* menuBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 811AF6EC192537C100B0F19F /* menuBar.png */; };
 		811AF6F219253AB900B0F19F /* searchButton1.png in Resources */ = {isa = PBXBuildFile; fileRef = 811AF6F019253AB900B0F19F /* searchButton1.png */; };
 		811AF6F319253AB900B0F19F /* searchButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = 811AF6F119253AB900B0F19F /* searchButton2.png */; };
+		811AF6F719271A2800B0F19F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811AF6F619271A2800B0F19F /* HomeViewController.m */; };
+		81C939F3192D309D009D9E4C /* TransportationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C939F2192D309D009D9E4C /* TransportationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,14 +84,18 @@
 		811AF6D719245F6800B0F19F /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		811AF6D819245F6800B0F19F /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		811AF6DC19245FA900B0F19F /* placeHolder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeHolder.jpg; sourceTree = "<group>"; };
-		811AF6DF19245FD100B0F19F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		811AF6E019245FD100B0F19F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		811AF6DF19245FD100B0F19F /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
+		811AF6E019245FD100B0F19F /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		811AF6E319245FF200B0F19F /* MainTableViewCells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCells.h; sourceTree = "<group>"; };
 		811AF6E419245FF200B0F19F /* MainTableViewCells.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCells.m; sourceTree = "<group>"; };
 		811AF6E61924618A00B0F19F /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		811AF6EC192537C100B0F19F /* menuBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuBar.png; sourceTree = "<group>"; };
 		811AF6F019253AB900B0F19F /* searchButton1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchButton1.png; sourceTree = "<group>"; };
 		811AF6F119253AB900B0F19F /* searchButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchButton2.png; sourceTree = "<group>"; };
+		811AF6F519271A2800B0F19F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		811AF6F619271A2800B0F19F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		81C939F1192D309D009D9E4C /* TransportationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportationViewController.h; sourceTree = "<group>"; };
+		81C939F2192D309D009D9E4C /* TransportationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,7 +226,9 @@
 			isa = PBXGroup;
 			children = (
 				811AF6D019245EE800B0F19F /* Storyboard */,
-				811AF6DA19245F8B00B0F19F /* HomeViewController */,
+				811AF6F41927191500B0F19F /* HomeViewController */,
+				811AF6DA19245F8B00B0F19F /* HomeTableViewController */,
+				81C939F0192D304F009D9E4C /* TransportationViewController */,
 			);
 			name = Interface;
 			sourceTree = "<group>";
@@ -236,6 +244,7 @@
 		811AF6D119245F0F00B0F19F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				811AF6FA1929181400B0F19F /* Xib */,
 				811AF6D619245F5400B0F19F /* Location */,
 				811AF6D219245F1A00B0F19F /* LocationCache */,
 			);
@@ -260,14 +269,14 @@
 			name = Location;
 			sourceTree = "<group>";
 		};
-		811AF6DA19245F8B00B0F19F /* HomeViewController */ = {
+		811AF6DA19245F8B00B0F19F /* HomeTableViewController */ = {
 			isa = PBXGroup;
 			children = (
 				811AF6E219245FDB00B0F19F /* TableViewCells */,
 				811AF6DE19245FAE00B0F19F /* View */,
 				811AF6DB19245FA100B0F19F /* Images */,
 			);
-			name = HomeViewController;
+			name = HomeTableViewController;
 			sourceTree = "<group>";
 		};
 		811AF6DB19245FA100B0F19F /* Images */ = {
@@ -282,8 +291,8 @@
 		811AF6DE19245FAE00B0F19F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				811AF6DF19245FD100B0F19F /* HomeViewController.h */,
-				811AF6E019245FD100B0F19F /* HomeViewController.m */,
+				811AF6DF19245FD100B0F19F /* HomeTableViewController.h */,
+				811AF6E019245FD100B0F19F /* HomeTableViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -313,6 +322,31 @@
 				811AF6EC192537C100B0F19F /* menuBar.png */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		811AF6F41927191500B0F19F /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				811AF6F519271A2800B0F19F /* HomeViewController.h */,
+				811AF6F619271A2800B0F19F /* HomeViewController.m */,
+			);
+			name = HomeViewController;
+			sourceTree = "<group>";
+		};
+		811AF6FA1929181400B0F19F /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Xib;
+			sourceTree = "<group>";
+		};
+		81C939F0192D304F009D9E4C /* TransportationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				81C939F1192D309D009D9E4C /* TransportationViewController.h */,
+				81C939F2192D309D009D9E4C /* TransportationViewController.m */,
+			);
+			name = TransportationViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,11 +449,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81C939F3192D309D009D9E4C /* TransportationViewController.m in Sources */,
 				811AF69819245CF000B0F19F /* AppDelegate.m in Sources */,
 				811AF6D519245F2F00B0F19F /* LocationCache.m in Sources */,
 				811AF6D919245F6800B0F19F /* Location.m in Sources */,
-				811AF6E119245FD100B0F19F /* HomeViewController.m in Sources */,
+				811AF6E119245FD100B0F19F /* HomeTableViewController.m in Sources */,
 				811AF6E519245FF200B0F19F /* MainTableViewCells.m in Sources */,
+				811AF6F719271A2800B0F19F /* HomeViewController.m in Sources */,
 				811AF69419245CF000B0F19F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,6 +667,7 @@
 				811AF6B219245CF000B0F19F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		811AF6B319245CF000B0F19F /* Build configuration list for PBXNativeTarget "HitchHikeTests" */ = {
 			isa = XCConfigurationList;
@@ -639,6 +676,7 @@
 				811AF6B519245CF000B0F19F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -27,6 +27,7 @@
         //Retrieving the objects
         self.locationName = [aDecoder decodeObjectForKey:@"locationName"];
         self.locationImage = [aDecoder decodeObjectForKey:@"locationName"];
+        self.objectID = [aDecoder decodeObjectForKey:@"identification"];
         
     }//end - if statement
     
@@ -40,6 +41,7 @@
     //Storing the objects
     [anEncoder encodeObject:self.locationName forKey:@"locationName"];
     [anEncoder encodeObject:self.locationImage forKey:@"locationImage"];
+    [anEncoder encodeObject:self.objectID forKey:@"identification"];
     
     
 }//end - encodeWithCoder -  method

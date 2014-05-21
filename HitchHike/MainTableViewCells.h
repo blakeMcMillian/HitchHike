@@ -8,10 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "Location.h"
 
 @interface MainTableViewCells : PFTableViewCell
 
 //Attributes:
+
+//Locations ---------------------------------------
+
+//Locations - Array of PFOject's - Contains Locations from Parse
+@property(strong, nonatomic) Location *aLocation;
+
+
+//View:
 
 //IBOutlets ----------------------------------
 
@@ -20,6 +29,9 @@
 
 //UILabel - Label for Cell - Name of Each Cell
 @property (strong, nonatomic) IBOutlet UILabel *locationInfo;
+
+
+
 
 
 
