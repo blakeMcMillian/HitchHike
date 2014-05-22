@@ -9,12 +9,16 @@
 #import "HomeTableViewController.h"
 #import "Location.h"
 #import "TransportationViewController.h"
+#import "NavigationViewController.h"
 
 @interface HomeTableViewController ()
 
 @end
 
 @implementation HomeTableViewController
+
+//Synthesizing Attributes:
+@synthesize delegate;
 
 - (id)initWithCoder:(NSCoder *)aCoder {
     self = [super initWithCoder:aCoder];
@@ -87,7 +91,9 @@
     
     //Caching the elements sent from Parse
     [self performSelector:@selector(loadingAndStoringLocationsFromParse) ];
-  
+
+    //Calling delegate method to hide the backButton on the Navigation View Controller
+    [self hideButton];
     
     
 }//end - viewDidLoad -  method
@@ -203,9 +209,50 @@
     self.aTransportationLocation = cell.aLocation;
     
     //Seguing into the transportation view controller
-    [self performSegueWithIdentifier:@"segueToTransportationViewController" sender:self];
+    [self performSegueWithIdentifier:@"segueToTransportationView" sender:self];
     
 }
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+ 
+    /*
+    //1. Setup the CATransform3D structure
+    CATransform3D rotation;
+    rotation = CATransform3DMakeRotation( (90.0*M_PI)/180, 0.0, 0.7, 0.4);
+    rotation.m34 = 1.0/ -600;
+    
+    
+    //2. Define the initial state (Before the animation)
+    cell.layer.shadowColor = [[UIColor blackColor]CGColor];
+    cell.layer.shadowOffset = CGSizeMake(10, 10);
+    cell.alpha = 0;
+    
+    cell.layer.transform = rotation;
+    cell.layer.anchorPoint = CGPointMake(0, 0.5);
+    
+    
+    //3. Define the final state (After the animation) and commit the animation
+    [UIView beginAnimations:@"rotation" context:NULL];
+    [UIView setAnimationDuration:0.8];
+    cell.layer.transform = CATransform3DIdentity;
+    cell.alpha = 1;
+    cell.layer.shadowOffset = CGSizeMake(0, 0);
+    [UIView commitAnimations];
+     */
+    
+    if (indexPath.row == self.objects.count)
+    {
+        // this method gets called when the cell is scrolling into view, but also when it's first added to the table view
+        // we only care about the first case
+        if ([tableView.indexPathsForVisibleRows containsObject:indexPath])
+        {
+            [self loadNextPage];
+        }
+    }
+    
+}
+
 #pragma mark - TableView Manipulation Methods
 
 -(void)loadingAndStoringLocationsFromParse
@@ -297,12 +344,21 @@
     
 }//end - cacheLocationAttributesFromParse -  method
 
+-(void)hideButton
+{
+    //checks the selector
+    if([self.delegate respondsToSelector:@selector(hideBackButton)])
+    {
+        //calls the delegate method to hide the backbutton
+        [self.delegate hideBackButton];
+    }
+}//end - hideButton - method
 
 #pragma mark - Segue Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Make sure your segue name in storyboard is the same as this line
-    if ([[segue identifier] isEqualToString:@"segueToTransportationViewController"])
+    if ([[segue identifier] isEqualToString:@"segueToTransportationView"])
     {
         // Get reference to the destination view controller
         TransportationViewController *vc = [segue destinationViewController];

@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Navigation View Controller-->
         <scene sceneID="0Ia-xX-R9p">
             <objects>
-                <viewController id="jgY-Gg-eYv" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NavigationView" id="jgY-Gg-eYv" customClass="NavigationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ruX-RF-kLG"/>
                         <viewControllerLayoutGuide type="bottom" id="7mA-9d-GM4"/>
@@ -17,16 +17,28 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6sU-94-XTK">
-                                <rect key="frame" x="0.0" y="99" width="320" height="468"/>
+                                <rect key="frame" x="0.0" y="102" width="320" height="466"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="z99-N7-EqA" kind="embed" id="8hl-71-fmp"/>
+                                    <segue destination="z99-N7-EqA" kind="embed" identifier="segueToHomeTableView" id="8hl-71-fmp"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DFw-OZ-2SS">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPk-Ux-rer">
+                                        <rect key="frame" x="20" y="9" width="35" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="segueToPreviousViewController:" destination="jgY-Gg-eYv" eventType="touchUpInside" id="YgI-nj-Xyt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -35,10 +47,13 @@
                     <navigationItem key="navigationItem" id="uz6-l1-434"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="backButton" destination="CPk-Ux-rer" id="Bd1-ck-lsJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOw-Nj-q1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3132" y="-981"/>
+            <point key="canvasLocation" x="-3112" y="-981"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="l67-4P-DkU">
@@ -48,7 +63,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="A1f-db-ps0" kind="relationship" relationship="rootViewController" id="Hea-Uc-xkE"/>
+                        <segue destination="A1f-db-ps0" kind="relationship" relationship="rootViewController" id="QZ1-IM-rcR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6P-sv-MCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -58,9 +73,9 @@
         <!--Home Table View Controller-->
         <scene sceneID="Chj-cs-bQF">
             <objects>
-                <tableViewController id="A1f-db-ps0" customClass="HomeTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="homeTableView" id="A1f-db-ps0" customClass="HomeTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="163" sectionHeaderHeight="22" sectionFooterHeight="22" id="60L-mQ-SAF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="468"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="466"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -97,7 +112,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Fpp-tg-zeM"/>
                     <connections>
-                        <segue destination="1uk-Ll-2pE" kind="push" identifier="segueToTransportationViewController" id="psc-cE-CjO"/>
+                        <segue destination="1uk-Ll-2pE" kind="push" identifier="segueToTransportationView" id="A1m-a3-5rP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUy-ux-Csg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -113,25 +128,15 @@
                         <viewControllerLayoutGuide type="bottom" id="CHN-BP-s23"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Tkh-Pd-m3E">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="468"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="466"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4d-KV-xsh">
-                                <rect key="frame" x="70" y="208" width="196" height="21"/>
+                                <rect key="frame" x="81" y="210" width="196" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcx-FQ-ykd">
-                                <rect key="frame" x="135" y="170" width="35" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="segueToHomeViewController:" destination="1uk-Ll-2pE" eventType="touchUpInside" id="bYS-9Z-V8d"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

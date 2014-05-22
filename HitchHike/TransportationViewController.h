@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "Location.h"
+#import "NavigationViewController.h"
 
-@interface TransportationViewController : UIViewController
+@interface TransportationViewController : UIViewController<NavigationViewDelegate>
+{
+    id<NavigationViewDelegate>_delegate;
+}
+
+
+@property (nonatomic, weak) id <NavigationViewDelegate> delegate;
+
 
 
 //Attributes:
@@ -22,13 +30,10 @@
 
 
 
-
 //View:
 
 //IBACtions ----------------------------------
 
-//UIButton - Segue - Performing a segue back to the homeViewController
-- (IBAction)segueToHomeViewController:(id)sender;
 
 
 
@@ -38,7 +43,15 @@
 @property (strong, nonatomic) IBOutlet UILabel *locationName;
 
 
+
 //Methods:
+
+//Methods:
+
+//Protocol ---------------------------------------
+
+//Protocol - Delegate method - method that hides the home button when the view loads
+-(void) showBackButton;
 
 //Segue's ---------------------------------------
 

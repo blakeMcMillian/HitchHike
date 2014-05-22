@@ -6,14 +6,33 @@
 //  Copyright (c) 2014 Blake McMillian. All rights reserved.
 //
 
+//Protocol
+@protocol HomeTableViewDelegate <NSObject>
+
+- (void) hideBackButton;
+
+@end
+
 #import <Parse/Parse.h>
 #import "Location.h"
 #import "MainTableViewCells.h"
 #import "LocationCache.h"
+#import "NavigationViewController.h"
+
+
 
 @interface HomeTableViewController : PFQueryTableViewController<UITableViewDataSource, UITableViewDelegate>
 
+//Protocol:
+
+//Portocol - Delegate - Method that communitcates with the HomeViewController
+@property (nonatomic, weak) id <HomeTableViewDelegate> delegate;
+
 //Attributes:
+
+
+
+
 
 //NSStrings ---------------------------------------
 
@@ -45,6 +64,11 @@
 
 //Methods:
 
+//Protocol ---------------------------------------
+
+//Protocol - Delegate method - method that hides the home button when the view loads
+-(void)hideButton;
+
 //TableView ---------------------------------------
 
 //TableView - Delegate & Datasource - methods used for initalizing cells
@@ -57,7 +81,6 @@
 -(void)loadingAndStoringLocationsFromParse;
 //TableView - PFQueryTableViewController - method used for initalizing cells
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object;
-
 
 
 //NSCoding ---------------------------------------
@@ -82,15 +105,6 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 
 
-
-
-
-
-
-
-
-
-
-
-
 @end
+
+
