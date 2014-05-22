@@ -38,7 +38,8 @@
 		811AF6ED192537C100B0F19F /* menuBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 811AF6EC192537C100B0F19F /* menuBar.png */; };
 		811AF6F219253AB900B0F19F /* searchButton1.png in Resources */ = {isa = PBXBuildFile; fileRef = 811AF6F019253AB900B0F19F /* searchButton1.png */; };
 		811AF6F319253AB900B0F19F /* searchButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = 811AF6F119253AB900B0F19F /* searchButton2.png */; };
-		811AF6F719271A2800B0F19F /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811AF6F619271A2800B0F19F /* NavigationViewController.m */; };
+		811AF6F719271A2800B0F19F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811AF6F619271A2800B0F19F /* RootViewController.m */; };
+		81AD482D192EA3B8001072FB /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81AD482C192EA3B8001072FB /* NavigationViewController.m */; };
 		81C939F3192D309D009D9E4C /* TransportationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C939F2192D309D009D9E4C /* TransportationViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -92,8 +93,10 @@
 		811AF6EC192537C100B0F19F /* menuBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuBar.png; sourceTree = "<group>"; };
 		811AF6F019253AB900B0F19F /* searchButton1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchButton1.png; sourceTree = "<group>"; };
 		811AF6F119253AB900B0F19F /* searchButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchButton2.png; sourceTree = "<group>"; };
-		811AF6F519271A2800B0F19F /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
-		811AF6F619271A2800B0F19F /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		811AF6F519271A2800B0F19F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		811AF6F619271A2800B0F19F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		81AD482B192EA3B8001072FB /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		81AD482C192EA3B8001072FB /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
 		81C939F1192D309D009D9E4C /* TransportationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportationViewController.h; sourceTree = "<group>"; };
 		81C939F2192D309D009D9E4C /* TransportationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -226,7 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				811AF6D019245EE800B0F19F /* Storyboard */,
-				811AF6F41927191500B0F19F /* NaviationView */,
+				81AD482A192EA38B001072FB /* NavigationViewController */,
+				811AF6F41927191500B0F19F /* RootViewController */,
 				811AF6DA19245F8B00B0F19F /* HomeTableViewController */,
 				81C939F0192D304F009D9E4C /* TransportationViewController */,
 			);
@@ -323,13 +327,22 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		811AF6F41927191500B0F19F /* NaviationView */ = {
+		811AF6F41927191500B0F19F /* RootViewController */ = {
 			isa = PBXGroup;
 			children = (
-				811AF6F519271A2800B0F19F /* NavigationViewController.h */,
-				811AF6F619271A2800B0F19F /* NavigationViewController.m */,
+				811AF6F519271A2800B0F19F /* RootViewController.h */,
+				811AF6F619271A2800B0F19F /* RootViewController.m */,
 			);
-			name = NaviationView;
+			name = RootViewController;
+			sourceTree = "<group>";
+		};
+		81AD482A192EA38B001072FB /* NavigationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				81AD482B192EA3B8001072FB /* NavigationViewController.h */,
+				81AD482C192EA3B8001072FB /* NavigationViewController.m */,
+			);
+			name = NavigationViewController;
 			sourceTree = "<group>";
 		};
 		81C939F0192D304F009D9E4C /* TransportationViewController */ = {
@@ -447,8 +460,9 @@
 				811AF6D919245F6800B0F19F /* Location.m in Sources */,
 				811AF6E119245FD100B0F19F /* HomeTableViewController.m in Sources */,
 				811AF6E519245FF200B0F19F /* MainTableViewCells.m in Sources */,
-				811AF6F719271A2800B0F19F /* NavigationViewController.m in Sources */,
+				811AF6F719271A2800B0F19F /* RootViewController.m in Sources */,
 				811AF69419245CF000B0F19F /* main.m in Sources */,
+				81AD482D192EA3B8001072FB /* NavigationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

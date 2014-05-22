@@ -8,17 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Location.h"
-#import "NavigationViewController.h"
+#import "RootViewController.h"
 
-@interface TransportationViewController : UIViewController<NavigationViewDelegate>
-{
-    id<NavigationViewDelegate>_delegate;
-}
-
-
-@property (nonatomic, weak) id <NavigationViewDelegate> delegate;
-
-
+@interface TransportationViewController : UIViewController
 
 //Attributes:
 
@@ -27,14 +19,9 @@
 //Locations - Temp Location Object - Used for manupulating location instances within the view
 @property(strong, nonatomic) Location *aLocation;
 
-
-
-
 //View:
 
 //IBACtions ----------------------------------
-
-
 
 
 //IBOutlets ----------------------------------
@@ -51,7 +38,7 @@
 //Protocol ---------------------------------------
 
 //Protocol - Delegate method - method that hides the home button when the view loads
--(void) showBackButton;
+
 
 //Segue's ---------------------------------------
 

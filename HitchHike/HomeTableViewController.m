@@ -9,7 +9,7 @@
 #import "HomeTableViewController.h"
 #import "Location.h"
 #import "TransportationViewController.h"
-#import "NavigationViewController.h"
+#import "RootViewController.h"
 
 @interface HomeTableViewController ()
 
@@ -91,6 +91,13 @@
     
     //Caching the elements sent from Parse
     [self performSelector:@selector(loadingAndStoringLocationsFromParse) ];
+    
+    RootViewController *rVc = [[RootViewController alloc]init];
+    self.delegate = rVc;
+    
+    NavigationViewController *nVc = [[NavigationViewController alloc]init];
+    self.delegate = nVc;
+    
 
     //Calling delegate method to hide the backButton on the Navigation View Controller
     [self hideButton];

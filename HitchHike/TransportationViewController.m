@@ -31,11 +31,6 @@
     // Do any additional setup after loading the view.
     
     self.locationName.text = self.aLocation.locationName;
-    
-    //Creating an instance of the homeTableViewController in order to pass the delegate reference
-    NavigationViewController *vc = [[NavigationViewController alloc]init];
-    vc.delegate = self;
-    [vc showButton]; //calling the method within the homeTableViewController
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,7 +41,7 @@
 
 #pragma mark Delegate methods
 
--(void) showBackButton
+/*-(void) showBackButton
 {
     //checks the selector
     if([self.delegate respondsToSelector:@selector(showBackButton)])
@@ -54,7 +49,7 @@
         
     }
     
-}//end - showBackButton  - method
+}//end - showBackButton  - method */
 
 #pragma mark - Segue
 /* In a storyboard-based application, you will often want to do a little preparation before navigation
