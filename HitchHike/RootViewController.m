@@ -37,10 +37,53 @@
     [query setLimit:12];
     
     [query findObjectsInBackgroundWithTarget:self selector:@selector(loadingAndStoringInitialLocationsFromParse:withError:)];
-    
-    
+
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //Creating the properties for the tableview
+    self.tableViewInstance.delegate = self;
+    self.tableViewInstance.maximumZoomScale = 2.0f;
+    self.tableViewInstance.contentSize = self.view.bounds.size;
+    self.tableViewInstance.alwaysBounceHorizontal = NO;
+    self.tableViewInstance.alwaysBounceVertical = YES;
+    self.tableViewInstance.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+    
+    
+    // Block for the pull to Refresh - top view
+    self.tV = [self.tableViewInstance addPullToRefreshPosition:AAPullToRefreshPositionTop ActionHandler:^(AAPullToRefresh *v){
+        
+        [self.tableViewInstance setContentOffset:self.tableViewInstance.contentOffset animated:NO];
+        
+        NSLog(@"fire from top");
+        [v performSelector:@selector(stopIndicatorAnimation) withObject:nil afterDelay:1.0f];
+        
+        
+        
+    }];
+    self.tV.imageIcon = [UIImage imageNamed:@"launchpad"];
+    self.tV.borderColor = [UIColor whiteColor];
+    self.tV.threshold = 60;
+    self.tV.borderWidth = 1.0f;
+    self.tV.showPullToRefresh = YES; // also remove KVO observer if set to NO.
+    
+    
+    // Block for pull to refresh - bottom view
+    self.bV = [self.tableViewInstance addPullToRefreshPosition:AAPullToRefreshPositionBottom ActionHandler:^(AAPullToRefresh *v){
+        
+        [self.tableViewInstance setContentOffset:self.tableViewInstance.contentOffset animated:NO];
+        
+        NSLog(@"fire from bottom");
+        [v performSelector:@selector(stopIndicatorAnimation) withObject:nil afterDelay:1.0f];
+        
+    }];
+    self.bV.imageIcon = [UIImage imageNamed:@"centerIcon"];
+    self.bV.borderColor = [UIColor whiteColor];
+    self.bV.threshold = 60;
+    self.bV.borderWidth = 1.0f;
+    self.bV.showPullToRefresh = YES; // also remove KVO observer if set to NO.
+    
     
     //Initilziing the Notification for Storing Models
     [[NSNotificationCenter defaultCenter]
@@ -68,9 +111,12 @@
         self.tempLocationCache = [[NSArray alloc]
                                   initWithArray:self.aLocationCache.cachedLocations];
     
-
-    
 }//end - viewDidLoad -  method
+
+/*- (UIView *)viewForZoomingInScrollView:(UITableView *)scrollView
+{
+    return self.thresholdView;
+}*/
 
 - (void)didReceiveMemoryWarning
 {
@@ -99,7 +145,7 @@
  {
      if(self.locations.count < 6)
      {
-         return 6;
+         return 3;
      }
      else
          return self.locations.count;
@@ -244,6 +290,8 @@
         //stopping the activity indicatior animation
         [self.activityIndicatorInstance stopAnimating];
     
+    
+    
 }
 
 
@@ -284,18 +332,30 @@
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 
-                // Now, this code is running in the main thread.
-                // Update your UI...
-                //hiding the activity indicator
-                [self.activityIndicatorView setHidden:YES];
+                //calling pull to refresh method
+                [self.tV manuallyTriggered];
                 
-                //Sending the activity indicator view to the back of the view hierarchy
-                // [self.view sendSubviewToBack:self.activityIndicatorView];
+                //Pasuing activity while the refresh operation is taking place
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+                    
+                    // Now, this code is running in the main thread.
+                    // Update your UI...
+                    //hiding the activity indicator
+                    [self.activityIndicatorView setHidden:YES];
+                    
+                    //Sending the activity indicator view to the back of the view hierarchy
+                    // [self.view sendSubviewToBack:self.activityIndicatorView];
+                    
+                    //stopping the activity indicatior animation
+                    [self.activityIndicatorInstance stopAnimating];
+                    
+                    [self.tableViewInstance reloadData];
+                    
+                    self.activityIndicatorView.backgroundColor = [UIColor blackColor];
+                    
+                });
                 
-                //stopping the activity indicatior animation
-                [self.activityIndicatorInstance stopAnimating];
-                
-                [self.tableViewInstance reloadData];
+               
             });
             
             

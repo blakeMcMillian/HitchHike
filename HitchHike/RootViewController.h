@@ -11,9 +11,11 @@
 #import "Location.h"
 #import "RootTableViewCells.h"
 #import "LocationCache.h"
+#import "AAPullToRefresh.h"
 
 
-@interface RootViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface RootViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
+
 
 //Attributes:
 
@@ -27,7 +29,13 @@
 //UITableView - LocationTableView - View that will display the locations from parse
 @property (strong, nonatomic) IBOutlet UITableView *tableViewInstance;
 
+//AAPullToRefresh ----------------------------------
 
+//AAPullToRefresh - Refresher Instance for the top view - Pull To Refresh Object
+@property (strong, nonatomic) AAPullToRefresh *tV;
+
+//UIActivityIndicator - Refresher Instance for the bottom view - Activity Indicator Object
+@property (strong, nonatomic) AAPullToRefresh *bV;
 
 //UIActivityIndicator ----------------------------------
 
@@ -71,6 +79,14 @@
 //Protocol ---------------------------------------
 
 //Protocol - Delegate method - method that hides the home button when the view loads
+
+//AAPullToRefresh ----------------------------------
+
+//AAPullToRefresh - Refresher Instance for the top view - Pull To Refresh Object
+//-(void) topViewDidBeginRefershing: (AAPullToRefresh *) topView;
+
+//AAPullToRefresh - Refresher Instance for the top view - Pull To Refresh Object
+//-(void) bottomViewDidBeginRefershing: (AAPullToRefresh *) bottomView;
 
 //TableView ---------------------------------------
 
