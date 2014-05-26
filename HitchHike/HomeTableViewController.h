@@ -15,9 +15,8 @@
 
 #import <Parse/Parse.h>
 #import "Location.h"
-#import "MainTableViewCells.h"
+#import "RootTableViewCells.h"
 #import "LocationCache.h"
-#import "RootViewController.h"
 
 
 

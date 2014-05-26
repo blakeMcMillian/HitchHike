@@ -6,15 +6,16 @@
 //  Copyright (c) 2014 Blake McMillian. All rights reserved.
 //
 
-#import "MainTableViewCells.h"
+#import "RootTableViewCells.h"
 
-@implementation MainTableViewCells
+@implementation RootTableViewCells
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
+        [self.locationImage setImage:[UIImage imageNamed:@"placeHolder.png"]];
     }
     return self;
 }

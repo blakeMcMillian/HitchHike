@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422432834.925694"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422432834.925694"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "340"
-            endingLineNumber = "340"
+            startingLineNumber = "332"
+            endingLineNumber = "332"
             landmarkName = "-cacheLocationAttributesFromParse"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "346"
-            endingLineNumber = "346"
+            startingLineNumber = "338"
+            endingLineNumber = "338"
             landmarkName = "-cacheLocationAttributesFromParse"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "327"
-            endingLineNumber = "327"
+            startingLineNumber = "319"
+            endingLineNumber = "319"
             landmarkName = "-appendToLocationWithoutCache:"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "302"
-            endingLineNumber = "302"
+            startingLineNumber = "294"
+            endingLineNumber = "294"
             landmarkName = "@implementation HomeTableViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "325"
-            endingLineNumber = "325"
+            startingLineNumber = "317"
+            endingLineNumber = "317"
             landmarkName = "-appendToLocationWithoutCache:"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "332"
-            endingLineNumber = "332"
+            startingLineNumber = "324"
+            endingLineNumber = "324"
             landmarkName = "@implementation HomeTableViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "339"
-            endingLineNumber = "339"
+            startingLineNumber = "331"
+            endingLineNumber = "331"
             landmarkName = "-cacheLocationAttributesFromParse"
             landmarkType = "5">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "338"
-            endingLineNumber = "338"
+            startingLineNumber = "330"
+            endingLineNumber = "330"
             landmarkName = "-cacheLocationAttributesFromParse"
             landmarkType = "5">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "275"
-            endingLineNumber = "275"
+            startingLineNumber = "267"
+            endingLineNumber = "267"
             landmarkName = "-loadingAndStoringLocationsFromParse"
             landmarkType = "5">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "275"
-            endingLineNumber = "275"
+            startingLineNumber = "267"
+            endingLineNumber = "267"
             landmarkName = "-loadingAndStoringLocationsFromParse"
             landmarkType = "5">
             <Locations>
@@ -248,11 +248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271"
+            startingLineNumber = "263"
+            endingLineNumber = "263"
             landmarkName = "-loadingAndStoringLocationsFromParse"
             landmarkType = "5">
          </BreakpointContent>
@@ -264,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "-tableView:cellForRowAtIndexPath:object:"
             landmarkType = "5">
          </BreakpointContent>
@@ -280,11 +280,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "310"
-            endingLineNumber = "310"
+            startingLineNumber = "302"
+            endingLineNumber = "302"
             landmarkName = "-appendToLocationCache:"
             landmarkType = "5">
          </BreakpointContent>
@@ -296,11 +296,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "309"
-            endingLineNumber = "309"
+            startingLineNumber = "301"
+            endingLineNumber = "301"
             landmarkName = "-appendToLocationCache:"
             landmarkType = "5">
          </BreakpointContent>
@@ -328,11 +328,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "@implementation HomeTableViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -344,11 +344,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "-enteringForeground"
             landmarkType = "5">
          </BreakpointContent>
@@ -392,11 +392,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "360"
-            endingLineNumber = "360"
+            startingLineNumber = "352"
+            endingLineNumber = "352"
             landmarkName = "-hideButton"
             landmarkType = "5">
          </BreakpointContent>
@@ -408,11 +408,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "361"
-            endingLineNumber = "361"
+            startingLineNumber = "353"
+            endingLineNumber = "353"
             landmarkName = "-hideButton"
             landmarkType = "5">
          </BreakpointContent>
@@ -424,11 +424,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422432834.925694"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -440,45 +440,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/RootViewController.m"
-            timestampString = "422488457.887576"
+            timestampString = "422762177.259346"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "-didReceiveMemoryWarning"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HitchHike/RootViewController.m"
-            timestampString = "422488457.887576"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "-didReceiveMemoryWarning"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HitchHike/RootViewController.m"
-            timestampString = "422488659.97706"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "@implementation RootViewController"
-            landmarkType = "3">
+            startingLineNumber = "422"
+            endingLineNumber = "422">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -504,13 +470,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/RootViewController.m"
-            timestampString = "422488659.97706"
+            timestampString = "422762177.259346"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "@implementation RootViewController"
-            landmarkType = "3">
+            startingLineNumber = "428"
+            endingLineNumber = "428">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -520,11 +484,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.h"
-            timestampString = "422477981.48012"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "@interface HomeTableViewController"
             landmarkType = "2">
             <Locations>
@@ -566,13 +530,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/RootViewController.m"
-            timestampString = "422488659.97706"
+            timestampString = "422762177.259346"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "@implementation RootViewController"
-            landmarkType = "3">
+            startingLineNumber = "427"
+            endingLineNumber = "427">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -582,13 +544,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/RootViewController.m"
-            timestampString = "422488457.887576"
+            timestampString = "422762177.259346"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "-prepareForSegue:sender:"
-            landmarkType = "5">
+            startingLineNumber = "402"
+            endingLineNumber = "402">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -598,11 +558,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -614,11 +574,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "356"
-            endingLineNumber = "356"
+            startingLineNumber = "348"
+            endingLineNumber = "348"
             landmarkName = "-hideButton"
             landmarkType = "5">
          </BreakpointContent>
@@ -630,13 +590,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/RootViewController.m"
-            timestampString = "422488457.887576"
+            timestampString = "422762177.259346"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "-prepareForSegue:sender:"
-            landmarkType = "5">
+            startingLineNumber = "381"
+            endingLineNumber = "381">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -646,13 +604,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/RootViewController.m"
-            timestampString = "422488457.887576"
+            timestampString = "422762177.259346"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "-hideBackButton"
-            landmarkType = "5">
+            startingLineNumber = "409"
+            endingLineNumber = "409">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -662,28 +618,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/HomeTableViewController.m"
-            timestampString = "422488982.485869"
+            timestampString = "422677608.764937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "355"
-            endingLineNumber = "355"
+            startingLineNumber = "347"
+            endingLineNumber = "347"
             landmarkName = "-hideButton"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HitchHike/RootViewController.m"
-            timestampString = "422488457.887576"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "-prepareForSegue:sender:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -700,6 +640,70 @@
             startingLineNumber = "44"
             endingLineNumber = "44"
             landmarkName = "-hideBackButton"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HitchHike/RootViewController.m"
+            timestampString = "422762177.259346"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "@implementation RootViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HitchHike/RootViewController.m"
+            timestampString = "422762177.259346"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HitchHike/RootViewController.m"
+            timestampString = "422762177.259346"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "-tableView:willDisplayCell:forRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HitchHike/RootViewController.m"
+            timestampString = "422762177.259346"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

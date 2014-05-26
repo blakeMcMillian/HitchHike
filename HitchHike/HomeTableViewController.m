@@ -8,7 +8,6 @@
 
 #import "HomeTableViewController.h"
 #import "Location.h"
-#import "TransportationViewController.h"
 #import "RootViewController.h"
 
 @interface HomeTableViewController ()
@@ -91,13 +90,6 @@
     
     //Caching the elements sent from Parse
     [self performSelector:@selector(loadingAndStoringLocationsFromParse) ];
-    
-    RootViewController *rVc = [[RootViewController alloc]init];
-    self.delegate = rVc;
-    
-    NavigationViewController *nVc = [[NavigationViewController alloc]init];
-    self.delegate = nVc;
-    
 
     //Calling delegate method to hide the backButton on the Navigation View Controller
     [self hideButton];
@@ -178,12 +170,12 @@
     //Specifing Cell Identifer
     static NSString *cellIdentifier = @"mainTableViewCells";
     
-    MainTableViewCells *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    RootTableViewCells *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     //Initalizing Cells
     if(cell == nil)
     {
-        cell = [[MainTableViewCells alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[RootTableViewCells alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         
     }//end - if statement
     
@@ -205,7 +197,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //Creating a cell object at the index that was selected
-    MainTableViewCells *cell = (MainTableViewCells *)[tableView cellForRowAtIndexPath:indexPath];
+    RootTableViewCells *cell = (RootTableViewCells *)[tableView cellForRowAtIndexPath:indexPath];
     
     //Performing some type of opertion...
     
@@ -365,16 +357,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Make sure your segue name in storyboard is the same as this line
-    if ([[segue identifier] isEqualToString:@"segueToTransportationView"])
-    {
-        // Get reference to the destination view controller
-        TransportationViewController *vc = [segue destinationViewController];
-        
-        // Pass any objects to the view controller here, like...
-        
-        vc.aLocation = self.aTransportationLocation;
-    }
-    
+   
 }
 
 
