@@ -57,7 +57,7 @@
         [self.tableViewInstance setContentOffset:self.tableViewInstance.contentOffset animated:NO];
         
         NSLog(@"fire from top");
-        [v performSelector:@selector(stopIndicatorAnimation) withObject:nil afterDelay:1.0f];
+        [v performSelector:@selector(stopIndicatorAnimation) withObject:nil afterDelay:.8f];
         
         
         
@@ -329,37 +329,37 @@
             
             //caching the locations from parse
             [self appendToLocationCache:self.aLocation];
+        
+    }//end - for loop
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
             
-            dispatch_async(dispatch_get_main_queue(), ^{
+            
+            //Pasuing activity while the refresh operation is taking place
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1.2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
                 
-                //calling pull to refresh method
+                //manually triggering pull to refresh
                 [self.tV manuallyTriggered];
                 
-                //Pasuing activity while the refresh operation is taking place
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-                    
-                    // Now, this code is running in the main thread.
-                    // Update your UI...
-                    //hiding the activity indicator
-                    [self.activityIndicatorView setHidden:YES];
-                    
-                    //Sending the activity indicator view to the back of the view hierarchy
-                    // [self.view sendSubviewToBack:self.activityIndicatorView];
-                    
-                    //stopping the activity indicatior animation
-                    [self.activityIndicatorInstance stopAnimating];
-                    
-                    [self.tableViewInstance reloadData];
-                    
-                    self.activityIndicatorView.backgroundColor = [UIColor blackColor];
-                    
-                });
+                // Now, this code is running in the main thread.
+                // Update your UI...
+                //hiding the activity indicator
+                [self.activityIndicatorView setHidden:YES];
                 
-               
+                //Sending the activity indicator view to the back of the view hierarchy
+                // [self.view sendSubviewToBack:self.activityIndicatorView];
+                
+                //stopping the activity indicatior animation
+                [self.activityIndicatorInstance stopAnimating];
+                
+                [self.tableViewInstance reloadData];
+                
+                self.activityIndicatorView.backgroundColor = [UIColor blackColor];
+                
             });
             
             
-    }//end - for loop
+        });
    
         
     }//end - if statement

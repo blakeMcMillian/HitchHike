@@ -563,7 +563,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Blake McMillian (XPAJ9XGNH2)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -602,7 +602,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Blake McMillian (ZD47QYZP5Z)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -625,6 +625,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Blake McMillian (XPAJ9XGNH2)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/BMaC/Desktop,
@@ -646,6 +647,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3D569FA1-835F-4A7E-BC65-79763BE68C11";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -656,6 +658,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Blake McMillian (ZD47QYZP5Z)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/BMaC/Desktop,
@@ -677,6 +680,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "EC0E8115-398C-459B-A9FE-98A04603B667";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -698,6 +702,7 @@
 				);
 				INFOPLIST_FILE = "HitchHikeTests/HitchHikeTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3F8111B4-0EEC-4B7A-A73C-D343DE0307DA";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -716,6 +721,7 @@
 				GCC_PREFIX_HEADER = "HitchHike/HitchHike-Prefix.pch";
 				INFOPLIST_FILE = "HitchHikeTests/HitchHikeTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3F8111B4-0EEC-4B7A-A73C-D343DE0307DA";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
