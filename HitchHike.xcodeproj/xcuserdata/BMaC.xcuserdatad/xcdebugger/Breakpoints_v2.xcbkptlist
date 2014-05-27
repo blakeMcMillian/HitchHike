@@ -440,11 +440,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/RootViewController.m"
-            timestampString = "422840192.703407"
+            timestampString = "422862954.299178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "482"
-            endingLineNumber = "482">
+            startingLineNumber = "519"
+            endingLineNumber = "519">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -470,11 +470,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/RootViewController.m"
-            timestampString = "422840192.703407"
+            timestampString = "422862954.299178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "488"
-            endingLineNumber = "488">
+            startingLineNumber = "525"
+            endingLineNumber = "525">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -530,11 +530,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/RootViewController.m"
-            timestampString = "422840192.703407"
+            timestampString = "422862954.299178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "487"
-            endingLineNumber = "487">
+            startingLineNumber = "524"
+            endingLineNumber = "524">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -544,11 +544,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/RootViewController.m"
-            timestampString = "422840192.703407"
+            timestampString = "422862954.299178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "462"
-            endingLineNumber = "462">
+            startingLineNumber = "499"
+            endingLineNumber = "499">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -590,11 +590,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/RootViewController.m"
-            timestampString = "422840192.703407"
+            timestampString = "422862954.299178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "441"
-            endingLineNumber = "441">
+            startingLineNumber = "478"
+            endingLineNumber = "478">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -604,11 +604,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/RootViewController.m"
-            timestampString = "422840192.703407"
+            timestampString = "422862954.299178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "469"
-            endingLineNumber = "469">
+            startingLineNumber = "506"
+            endingLineNumber = "506">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -650,28 +650,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/RootViewController.m"
-            timestampString = "422838476.354368"
+            timestampString = "422862886.438006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "245"
-            endingLineNumber = "245"
-            landmarkName = "@implementation RootViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HitchHike/RootViewController.m"
-            timestampString = "422838476.354368"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "336"
+            endingLineNumber = "336"
+            landmarkName = "-loadingAndStoringInitialLocationsFromParse:withError:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -682,27 +666,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HitchHike/RootViewController.m"
-            timestampString = "422838476.354368"
+            timestampString = "422862886.438006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
-            landmarkName = "-tableView:willDisplayCell:forRowAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HitchHike/RootViewController.m"
-            timestampString = "422838476.354368"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>

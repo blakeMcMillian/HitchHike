@@ -100,8 +100,8 @@
 -(void)loadingAndStoringInitialLocationsFromParse:(NSArray *)locationsFromParse
                                         withError:(NSError *)error;
 
--(void)loadingAndStoringInitialLocationsFromParse;
 
+-(void) findObjectInBackground;
 
 
 //NSCoding ---------------------------------------

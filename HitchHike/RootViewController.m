@@ -32,12 +32,11 @@
     //Animating the activity indicator
     [self.activityIndicatorInstance startAnimating];
     
-    //Performing a query to retrieve the objects from the backgorund
-    PFQuery *query = [PFQuery queryWithClassName:@"Locations"];
-    [query setLimit:12];
     
-    [query findObjectsInBackgroundWithTarget:self selector:@selector(loadingAndStoringInitialLocationsFromParse:withError:)];
-
+    [self performSelector:@selector(findObjectInBackground)
+               withObject:nil
+               afterDelay:2.0];
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
@@ -57,7 +56,7 @@
         [self.tableViewInstance setContentOffset:self.tableViewInstance.contentOffset animated:NO];
         
         NSLog(@"fire from top");
-        [v performSelector:@selector(stopIndicatorAnimation) withObject:nil afterDelay:.8f];
+        [v performSelector:@selector(stopIndicatorAnimation) withObject:nil afterDelay:.1f];
         
     }];
     self.tV.imageIcon = [UIImage imageNamed:@"launchpad"];
@@ -73,7 +72,7 @@
         [self.tableViewInstance setContentOffset:self.tableViewInstance.contentOffset animated:NO];
         
         NSLog(@"fire from bottom");
-        [v performSelector:@selector(stopIndicatorAnimation) withObject:nil afterDelay:1.0f];
+        [v performSelector:@selector(stopIndicatorAnimation) withObject:nil afterDelay:.1f];
         
     }];
     self.bV.imageIcon = [UIImage imageNamed:@"launchpad"];
@@ -153,9 +152,9 @@
  }//end - numberOfRowsInSection -  method
  
  
- - (RootTableViewCells *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (RootTableViewCells *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    
     //Specifing Cell Identifer
     static NSString *cellIdentifier = @"customCell";
     
@@ -176,11 +175,30 @@
     //Setting the cell attributes
     
     //If the cell image is not ready, then upload a temporary image
-    if(cell.locationImage.image == nil)
+    if(!self.aLocation)
     {
+        //Animating the cell's Image ------------------------------
+        //1. Define the initial state (Before the animation)
+        cell.shadowLayer.alpha = 1;
         cell.locationImage.image = [UIImage imageNamed:@"placeHolder.jpg"];
-        cell.locationInfo.text = @"Loading...";
+        cell.locationInfo.text = @"";
         cell.aLocation = self.aLocation;
+        cell.layer.shadowOffset = CGSizeMake(10, 10);
+        
+        //2. Define the final state (After the animation) and commit the animation
+        [UIView beginAnimations:@"animateIn" context:NULL];
+        [UIView setAnimationDuration:2.5];
+        cell.shadowLayer.alpha = 0;
+        cell.layer.shadowOffset = CGSizeMake(0, 0);
+        
+        //Animating the cell's text ------------------------------
+        //1. Initial state before the animation
+        cell.locationInfo.alpha = 0;
+        
+        //final state after the animation
+        [UIView beginAnimations:@"animateCellText" context:NULL];
+        [UIView setAnimationDuration:6];
+        cell.locationInfo.alpha = 1;
         
         //updating the cell's UI
         [cell setNeedsLayout];
@@ -189,22 +207,47 @@
     }
     else //If cell image is sucesfully loaded from the database, then the correct image is set
     {
+        //Animating the cell's Image ------------------------------
+        //1. Define the initial state (Before the animation)
+        cell.shadowLayer.alpha = 1;
+        cell.layer.shadowOffset = CGSizeMake(10, 10);
+        
+        
+        
+        //2. Define the final state (After the animation) and commit the animation
+        [UIView beginAnimations:@"animateCellImage" context:NULL];
+        [UIView setAnimationDuration:2.5];
+        cell.shadowLayer.alpha = 0;
         cell.locationImage.image = self.aLocation.locationImage;
         cell.locationInfo.text = self.aLocation.locationName;
+        
         cell.aLocation = self.aLocation;
+        cell.layer.shadowOffset = CGSizeMake(0, 0);
+        
+        
+        //Animating the cell's Text ------------------------------
+        
+        //1. Inital state before the animation
+        cell.locationInfo.alpha = 0;
+        
+        //2.Final state after the animation
+        [UIView beginAnimations:@"animateCellText" context:NULL];
+        [UIView setAnimationDuration:6];
+        cell.locationInfo.alpha = 1;
         
         //updating the cell's UI
         [cell setNeedsLayout];
         [cell setNeedsDisplay];
+        
+        
+        
+        
     }
     
+    //Returning the cells
+    return cell;
+}//end - cellForRowAtIndexPath -  method
 
-    
-    
- //Returning the cells
- return cell;
- }//end - cellForRowAtIndexPath -  method
- 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -242,62 +285,49 @@
 }//end - method - willDisplayCell
 
 #pragma mark - TableView Manipulation Methods
--(void)loadingAndStoringInitialLocationsFromParse
+-(void) findObjectInBackground
 {
-        PFQuery *locationsFromParse = [PFQuery queryWithClassName:@"Locations"];
-    
-        //initializing the locations from the data retrieved parse
-        self.locations = [locationsFromParse findObjects];
-
-        //Iterating over the array of PFObjects retrieved from parse
-        for (PFObject *parseObject in self.locations)
-        {
-            //initializing a new location object
-            self.aLocation = [Location new];
-            
-            //Stroing the Attributes from parse into temporary variables...
-            
-            //Storing the name:
-            
-            self.aLocation.locationName = [parseObject objectForKey:@"locationName"];
-            
-            
-            //Storing the image:
-            
-            //Parsing the PFFIle into an image for the "location image attribute
-            PFFile *tempImageFromFile = [parseObject objectForKey:@"locationImage"];//storing as a file
-            NSData *tempImageFromData = [[NSData alloc]initWithData:[tempImageFromFile getData]];//parsing into data
-            self.aLocation.locationImage = [UIImage imageWithData:tempImageFromData]; // storing as a UIImage
-            
-            //Stroing the objectID:
-            
-            self.aLocation.objectID = [parseObject objectForKey:@"objectId"];
-            
-            //caching the locations from parse
-            [self appendToLocationCache:self.aLocation];
-            
-        }//end - for loop
-    
-
+    //removing the loading screen from the view
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        //manually triggering pull to refresh
+        [self.tV manuallyTriggered];
+        
+        // Now, this code is running in the main thread.
+        // Update your UI...
         //hiding the activity indicator
         [self.activityIndicatorView setHidden:YES];
         
         //Sending the activity indicator view to the back of the view hierarchy
-        [self.view sendSubviewToBack:self.activityIndicatorView];
+        // [self.view sendSubviewToBack:self.activityIndicatorView];
         
         //stopping the activity indicatior animation
         [self.activityIndicatorInstance stopAnimating];
+        
+        [self.tableViewInstance reloadData];
+        
+        self.activityIndicatorView.backgroundColor = [UIColor blackColor];
+        
+    });
+    
+    //Performing a query to retrieve the objects from the backgorund
+    PFQuery *query = [PFQuery queryWithClassName:@"Locations"];
+    [query setLimit:12];
+    
+    [query findObjectsInBackgroundWithTarget:self selector:@selector(loadingAndStoringInitialLocationsFromParse:withError:)];
     
     
     
-}
-
+}//end - method - findObjectsInBackground
 
 -(void)loadingAndStoringInitialLocationsFromParse:(NSArray *)locationsFromParse
                                         withError:(NSError *)error
 {
+    
+    
     //initializing the locations from the data retrieved parse
     self.locations = [[NSArray alloc]initWithArray:locationsFromParse];
+    
     
     if(!error)
     {
@@ -327,38 +357,13 @@
             
             //caching the locations from parse
             [self appendToLocationCache:self.aLocation];
+            
+            //reloading the table data
+            [self.tableViewInstance reloadData];
         
     }//end - for loop
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            
-            //Pasuing activity while the refresh operation is taking place
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1.2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-                
-                //manually triggering pull to refresh
-                [self.tV manuallyTriggered];
-                
-                // Now, this code is running in the main thread.
-                // Update your UI...
-                //hiding the activity indicator
-                [self.activityIndicatorView setHidden:YES];
-                
-                //Sending the activity indicator view to the back of the view hierarchy
-                // [self.view sendSubviewToBack:self.activityIndicatorView];
-                
-                //stopping the activity indicatior animation
-                [self.activityIndicatorInstance stopAnimating];
-                
-                [self.tableViewInstance reloadData];
-                
-                self.activityIndicatorView.backgroundColor = [UIColor blackColor];
-                
-            });
-            
-            
-        });
-   
+       
         
     }//end - if statement
     
