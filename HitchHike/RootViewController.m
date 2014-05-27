@@ -76,7 +76,7 @@
         [v performSelector:@selector(stopIndicatorAnimation) withObject:nil afterDelay:1.0f];
         
     }];
-    self.bV.imageIcon = [UIImage imageNamed:@"centerIcon"];
+    self.bV.imageIcon = [UIImage imageNamed:@"launchpad"];
     self.bV.borderColor = [UIColor whiteColor];
     self.bV.threshold = 60;
     self.bV.borderWidth = 1.0f;
