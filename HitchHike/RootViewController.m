@@ -59,8 +59,6 @@
         NSLog(@"fire from top");
         [v performSelector:@selector(stopIndicatorAnimation) withObject:nil afterDelay:.8f];
         
-        
-        
     }];
     self.tV.imageIcon = [UIImage imageNamed:@"launchpad"];
     self.tV.borderColor = [UIColor whiteColor];
