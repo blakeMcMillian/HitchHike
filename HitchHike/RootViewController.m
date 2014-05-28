@@ -65,21 +65,13 @@
     self.tV.borderWidth = 1.0f;
     self.tV.showPullToRefresh = YES; // also remove KVO observer if set to NO.
     
+    //implementing a footer in the tableview
+    TYMActivityIndicatorView *activityIndicatorView = [[TYMActivityIndicatorView alloc] initWithActivityIndicatorStyle:TYMActivityIndicatorViewStyleNormal];
+    UIImage *tempImage = [UIImage imageNamed:@"launchpad"];
+    [activityIndicatorView setIndicatorImage:tempImage];
     
-    // Block for pull to refresh - bottom view
-    self.bV = [self.tableViewInstance addPullToRefreshPosition:AAPullToRefreshPositionBottom ActionHandler:^(AAPullToRefresh *v){
-        
-        [self.tableViewInstance setContentOffset:self.tableViewInstance.contentOffset animated:NO];
-        
-        NSLog(@"fire from bottom");
-        [v performSelector:@selector(stopIndicatorAnimation) withObject:nil afterDelay:.1f];
-        
-    }];
-    self.bV.imageIcon = [UIImage imageNamed:@"launchpad"];
-    self.bV.borderColor = [UIColor whiteColor];
-    self.bV.threshold = 60;
-    self.bV.borderWidth = 1.0f;
-    self.bV.showPullToRefresh = YES; // also remove KVO observer if set to NO.
+    activityIndicatorView.frame=CGRectMake((activityIndicatorView.bounds.size.width - activityIndicatorView.bounds.size.width)/2, -activityIndicatorView.bounds.size.height, activityIndicatorView.bounds.size.width, activityIndicatorView.bounds.size.height);
+    self.tableViewInstance.tableFooterView = activityIndicatorView;
     
     
     //Initilziing the Notification for Storing Models
