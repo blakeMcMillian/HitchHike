@@ -40,6 +40,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    //hiding the greyline in the tableviewcells
+    self.tableViewInstance.separatorColor = [UIColor clearColor];
+    
     //Creating the properties for the tableview
     self.tableViewInstance.delegate = self;
     self.tableViewInstance.maximumZoomScale = 2.0f;
@@ -66,13 +69,12 @@
     self.tV.showPullToRefresh = YES; // also remove KVO observer if set to NO.
     
     //implementing a footer in the tableview
-    TYMActivityIndicatorView *activityIndicatorView = [[TYMActivityIndicatorView alloc] initWithActivityIndicatorStyle:TYMActivityIndicatorViewStyleNormal];
+    self.footerActivityIndicatorView = [[TYMActivityIndicatorView alloc] initWithActivityIndicatorStyle:TYMActivityIndicatorViewStyleNormal];
     UIImage *tempImage = [UIImage imageNamed:@"launchpad"];
-    [activityIndicatorView setIndicatorImage:tempImage];
+    [self.footerActivityIndicatorView setIndicatorImage:tempImage];
     
-    activityIndicatorView.frame=CGRectMake((activityIndicatorView.bounds.size.width - activityIndicatorView.bounds.size.width)/2, -activityIndicatorView.bounds.size.height, activityIndicatorView.bounds.size.width, activityIndicatorView.bounds.size.height);
-    self.tableViewInstance.tableFooterView = activityIndicatorView;
-    
+    self.footerActivityIndicatorView.frame=CGRectMake((self.footerActivityIndicatorView.bounds.size.width - self.footerActivityIndicatorView.bounds.size.width)/2, -self.footerActivityIndicatorView.bounds.size.height, self.footerActivityIndicatorView.bounds.size.width, self.footerActivityIndicatorView.bounds.size.height);
+    self.tableViewInstance.tableFooterView = self.footerActivityIndicatorView;
     
     //Initilziing the Notification for Storing Models
     [[NSNotificationCenter defaultCenter]
@@ -277,13 +279,36 @@
 }//end - method - willDisplayCell
 
 #pragma mark - TableView Manipulation Methods
+//displaying the activity indicator
+- (void)scrollViewDidScroll:(UIScrollView *)aScrollView
+{
+    CGPoint offset = aScrollView.contentOffset;
+    CGRect bounds = aScrollView.bounds;
+    CGSize size = aScrollView.contentSize;
+    UIEdgeInsets inset = aScrollView.contentInset;
+    float y = offset.y + bounds.size.height - inset.bottom;
+    float h = size.height;
+    // NSLog(@"offset: %f", offset.y);
+    // NSLog(@"content.height: %f", size.height);
+    // NSLog(@"bounds.height: %f", bounds.size.height);
+    // NSLog(@"inset.top: %f", inset.top);
+    // NSLog(@"inset.bottom: %f", inset.bottom);
+    // NSLog(@"pos: %f of %f", y, h);
+    
+    float reload_distance = 10;
+    if(y > h + reload_distance)
+    {
+        [self.footerActivityIndicatorView startAnimating];
+        
+        //launch a method to fetch more data from the table
+        
+        //disable the activity indicator in that method
+    }
+}
 -(void) findObjectInBackground
 {
     //removing the loading screen from the view
     dispatch_async(dispatch_get_main_queue(), ^{
-        
-        //manually triggering pull to refresh
-        [self.tV manuallyTriggered];
         
         // Now, this code is running in the main thread.
         // Update your UI...

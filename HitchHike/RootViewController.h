@@ -12,13 +12,14 @@
 #import "RootTableViewCells.h"
 #import "LocationCache.h"
 #import "AAPullToRefresh.h"
+#import "TYMActivityIndicatorView.h"
 
 
 @interface RootViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 
 
 //Attributes:
-
+@property (strong, nonatomic) IBOutlet TYMActivityIndicatorView *footerActivityIndicatorView;
 //View:
 
 //UIViews ----------------------------------
