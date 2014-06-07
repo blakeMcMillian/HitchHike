@@ -7,7 +7,7 @@
         <!--Navigation Controller-->
         <scene sceneID="l67-4P-DkU">
             <objects>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="z99-N7-EqA" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" definesPresentationContext="YES" navigationBarHidden="YES" id="z99-N7-EqA" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="j4W-yn-cGr">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -79,6 +79,52 @@
             </objects>
             <point key="canvasLocation" x="-2388" y="-939"/>
         </scene>
+        <!--Home Table View Controller-->
+        <scene sceneID="Chj-cs-bQF">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zUy-ux-Csg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController storyboardIdentifier="homeTableView" id="A1f-db-ps0" customClass="HomeTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="163" sectionHeaderHeight="22" sectionFooterHeight="22" id="60L-mQ-SAF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mainTableViewCells" rowHeight="163" id="N9g-Tv-m2x" customClass="RootTableViewCells">
+                                <rect key="frame" x="0.0" y="22" width="320" height="163"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N9g-Tv-m2x" id="UkW-8F-Xbz">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="162"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeHolder.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BGq-Oh-Smh">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="163"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2f-yW-OLS">
+                                            <rect key="frame" x="14" y="132" width="104" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="locationImage" destination="BGq-Oh-Smh" id="Axw-cP-pgT"/>
+                                    <outlet property="locationInfo" destination="N2f-yW-OLS" id="lPK-5i-04c"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="A1f-db-ps0" id="hiv-vI-UeT"/>
+                            <outlet property="delegate" destination="A1f-db-ps0" id="qKS-ss-aOY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Fpp-tg-zeM"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="-1881" y="-2016"/>
+        </scene>
         <!--Transportation View Controller-->
         <scene sceneID="maU-KU-dtn">
             <objects>
@@ -110,6 +156,9 @@
             <point key="canvasLocation" x="-1881" y="-939"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="placeHolder.jpg" width="320" height="164"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

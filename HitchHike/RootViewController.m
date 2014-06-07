@@ -43,6 +43,8 @@
     //hiding the greyline in the tableviewcells
     self.tableViewInstance.separatorColor = [UIColor clearColor];
     
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     //Creating the properties for the tableview
     self.tableViewInstance.delegate = self;
     self.tableViewInstance.maximumZoomScale = 2.0f;
