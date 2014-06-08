@@ -28,7 +28,7 @@
 @property (strong, nonatomic) IBOutlet UIView *activityIndicatorView;
 
 //UITableView - LocationTableView - View that will display the locations from parse
-@property (strong, nonatomic) IBOutlet UITableView *tableViewInstance;
+@property (weak, nonatomic) IBOutlet UITableView *tableViewInstance;
 
 //AAPullToRefresh ----------------------------------
 

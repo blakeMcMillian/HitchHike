@@ -82,7 +82,6 @@
         <!--Home Table View Controller-->
         <scene sceneID="Chj-cs-bQF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zUy-ux-Csg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="homeTableView" id="A1f-db-ps0" customClass="HomeTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="163" sectionHeaderHeight="22" sectionFooterHeight="22" id="60L-mQ-SAF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -122,6 +121,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Fpp-tg-zeM"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zUy-ux-Csg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1881" y="-2016"/>
         </scene>

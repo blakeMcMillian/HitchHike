@@ -240,6 +240,14 @@
         
     }
     
+    //setting the cell properties so that it extends outside of the bounds
+    [cell.contentView.superview setClipsToBounds:NO];
+    [cell.contentView setClipsToBounds:NO];
+    [cell setClipsToBounds:NO];
+    
+    //removing the selection style so that the content remains consistent
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     //Returning the cells
     return cell;
 }//end - cellForRowAtIndexPath -  method
@@ -275,6 +283,17 @@
         [UIView setAnimationDuration:1.2];
         cell.shadowLayer.alpha = 0;
         cell.layer.shadowOffset = CGSizeMake(0, 0);
+    
+        //clip to bounds hacks
+        //ios 7 cell background fix
+        [cell.contentView.superview setClipsToBounds:NO];
+        [cell.contentView setClipsToBounds:NO];
+        [cell setClipsToBounds:NO];
+        [cell setBackgroundColor:[UIColor clearColor]];
+        //ios 7 content clipping fix
+        [cell.contentView.superview setClipsToBounds:NO];
+        [cell.contentView setClipsToBounds:NO];
+        [cell setClipsToBounds:NO];
 
     
     
