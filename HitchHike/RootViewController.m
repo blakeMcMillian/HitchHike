@@ -32,7 +32,7 @@
     //Animating the activity indicator
     [self.activityIndicatorInstance startAnimating];
     
-    
+    //
     [self performSelector:@selector(findObjectInBackground)
                withObject:nil
                afterDelay:2.0];
@@ -40,6 +40,52 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    //initilizing the tableview properties
+    [self performSelector:@selector(initTableViewWithSettings)];
+    
+    //initilizing the view with nscoding
+    [self performSelector:@selector(initViewWithNSCoding)];
+
+    //reshaping the navigation bar
+    [self performSelector:@selector(reshapeNavigationBar)];
+    
+    
+}//end - viewDidLoad -  method
+
+-(void)reshapeNavigationBar
+{
+    //// Bezier Drawing
+    UIBezierPath* bezierPath = UIBezierPath.bezierPath;
+    [bezierPath moveToPoint: CGPointMake(320, 0)];
+    [bezierPath addCurveToPoint: CGPointMake(320, 80) controlPoint1: CGPointMake(320, 0) controlPoint2: CGPointMake(320, 80)];
+    [bezierPath addLineToPoint: CGPointMake(61, 80)];
+    [bezierPath addCurveToPoint: CGPointMake(40, 101) controlPoint1: CGPointMake(58.78, 82.22) controlPoint2: CGPointMake(40, 101)];
+    [bezierPath addCurveToPoint: CGPointMake(19, 80) controlPoint1: CGPointMake(40, 101) controlPoint2: CGPointMake(21.22, 82.22)];
+    [bezierPath addLineToPoint: CGPointMake(0, 80)];
+    [bezierPath addLineToPoint: CGPointMake(0, 0)];
+    [bezierPath addLineToPoint: CGPointMake(320, 0)];
+    [bezierPath addLineToPoint: CGPointMake(320, 0)];
+    [bezierPath closePath];
+    
+    //setting the layer mask for the navigation bar
+    CAShapeLayer *mask = [CAShapeLayer layer];
+    mask.path = bezierPath.CGPath;
+    
+    //setting the mask onto the navigation view
+    self.navigationBarInstance.layer.mask = mask;
+
+}//end - reshapeNavigationBar - method
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+    
+}//end - didReceiveMemoryWarning -  method
+
+#pragma markIinitilizations
+-(void)initTableViewWithSettings
+{
     //hiding the greyline in the tableviewcells
     self.tableViewInstance.separatorColor = [UIColor clearColor];
     
@@ -52,8 +98,6 @@
     self.tableViewInstance.alwaysBounceHorizontal = NO;
     self.tableViewInstance.alwaysBounceVertical = YES;
     self.tableViewInstance.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    
-    
     
     // Block for the pull to Refresh - top view
     self.tV = [self.tableViewInstance addPullToRefreshPosition:AAPullToRefreshPositionTop ActionHandler:^(AAPullToRefresh *v){
@@ -75,23 +119,20 @@
     UIImage *tempImage = [UIImage imageNamed:@"launchpad"];
     [self.footerActivityIndicatorView setIndicatorImage:tempImage];
     
-    self.footerActivityIndicatorView.frame=CGRectMake((self.footerActivityIndicatorView.bounds.size.width - self.footerActivityIndicatorView.bounds.size.width)/2, -self.footerActivityIndicatorView.bounds.size.height, self.footerActivityIndicatorView.bounds.size.width, self.footerActivityIndicatorView.bounds.size.height);
+    self.footerActivityIndicatorView.frame=CGRectMake((self.footerActivityIndicatorView.bounds.size.width -
+                                                       self.footerActivityIndicatorView.bounds.size.width)/2, -
+                                                      self.footerActivityIndicatorView.bounds.size.height,
+                                                      self.footerActivityIndicatorView.bounds.size.width,
+                                                      self.footerActivityIndicatorView.bounds.size.height);
     self.tableViewInstance.tableFooterView = self.footerActivityIndicatorView;
+
     
-    //Initilziing the Notification for Storing Models
-    [[NSNotificationCenter defaultCenter]
-     addObserver:self
-     selector:@selector(enteringBackground)
-     name:UIApplicationDidEnterBackgroundNotification
-     object:nil];
     
-    //Initilziing the Notification for Loading Models
-    [[NSNotificationCenter defaultCenter]
-     addObserver:self
-     selector:@selector(enteringForeground)
-     name:UIApplicationWillEnterForegroundNotification
-     object:nil];
-    
+}//end -initTableViewWithSettings - method
+
+-(void)initViewWithNSCoding
+{
+ 
     //Initilizing the Location Cache
     
     //if the cache is empty create a new array
@@ -104,19 +145,10 @@
         self.tempLocationCache = [[NSArray alloc]
                                   initWithArray:self.aLocationCache.cachedLocations];
     
-}//end - viewDidLoad -  method
-
-/*- (UIView *)viewForZoomingInScrollView:(UITableView *)scrollView
-{
-    return self.thresholdView;
-}*/
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
     
-}//end - didReceiveMemoryWarning -  method
+}//end - initViewWIthNSCoding - method
+
+
 
 #pragma mark - App Delegate Methods
 -(void) enteringBackground
@@ -146,8 +178,7 @@
      
  
  }//end - numberOfRowsInSection -  method
- 
- 
+
 - (RootTableViewCells *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -165,6 +196,11 @@
     }//end - if statement
     
     // Configure the cell...
+    //setting up the translucent view
+    cell.translucentView.translucentAlpha = .7;
+    cell.translucentView.translucentStyle = UIBarStyleDefault;
+    cell.translucentView.translucentTintColor = [UIColor clearColor];
+    cell.translucentView.backgroundColor = [UIColor clearColor];
     
     //Creating a temporary dictionary to retreive the image for each location
     self.aLocation = [self.aLocationCache.cachedLocations objectAtIndex:indexPath.row];
@@ -193,7 +229,7 @@
         
         //final state after the animation
         [UIView beginAnimations:@"animateCellText" context:NULL];
-        [UIView setAnimationDuration:6];
+        [UIView setAnimationDuration:3];
         cell.locationInfo.alpha = 1;
         
         //updating the cell's UI
@@ -228,15 +264,12 @@
         
         //2.Final state after the animation
         [UIView beginAnimations:@"animateCellText" context:NULL];
-        [UIView setAnimationDuration:6];
+        [UIView setAnimationDuration:3];
         cell.locationInfo.alpha = 1;
         
         //updating the cell's UI
         [cell setNeedsLayout];
         [cell setNeedsDisplay];
-        
-        
-        
         
     }
     
@@ -266,7 +299,7 @@
     //Storing the location that was selected by ther user
     self.aTransportationLocation = cell.aLocation;
     
-    [self performSegueWithIdentifier:@"segueToTransportationView" sender:self];
+  //  [self performSegueWithIdentifier:@"segueToTransportationView" sender:self];
     
 }
 
@@ -326,6 +359,7 @@
         //disable the activity indicator in that method
     }
 }
+
 -(void) findObjectInBackground
 {
     //removing the loading screen from the view
@@ -342,16 +376,21 @@
         //stopping the activity indicatior animation
         [self.activityIndicatorInstance stopAnimating];
         
+        //reloading the table data
         [self.tableViewInstance reloadData];
         
+        //setting the background color for the activity indicator
         self.activityIndicatorView.backgroundColor = [UIColor blackColor];
         
     });
     
     //Performing a query to retrieve the objects from the backgorund
     PFQuery *query = [PFQuery queryWithClassName:@"Locations"];
+    
+    //Setting a limit for the items that are being queried
     [query setLimit:12];
     
+    //finding the objects in the background
     [query findObjectsInBackgroundWithTarget:self selector:@selector(loadingAndStoringInitialLocationsFromParse:withError:)];
     
     
@@ -361,8 +400,6 @@
 -(void)loadingAndStoringInitialLocationsFromParse:(NSArray *)locationsFromParse
                                         withError:(NSError *)error
 {
-    
-    
     //initializing the locations from the data retrieved parse
     self.locations = [[NSArray alloc]initWithArray:locationsFromParse];
     
@@ -378,7 +415,6 @@
             //Stroing the Attributes from parse into temporary variables...
             
             //Storing the name:
-            
             self.aLocation.locationName = [parseObject objectForKey:@"locationName"];
             
             
@@ -406,8 +442,6 @@
     }//end - if statement
     
   
-    
-   
 }//end - populateMainTableView -  method
 
 #pragma mark Caching
@@ -428,6 +462,7 @@
     [LocationCache saveLocations:self.aLocationCache];
     
 }
+
 -(void)appendToLocationWithoutCache:(Location*)aLocationObject;
 {
     
@@ -462,12 +497,16 @@
 }//end - cacheLocationAttributesFromParse -  method
 
 
-
 #pragma mark - Segue Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Make sure your segue name in storyboard is the same as this line
     
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 

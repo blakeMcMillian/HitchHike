@@ -13,9 +13,12 @@
 #import "LocationCache.h"
 #import "AAPullToRefresh.h"
 #import "TYMActivityIndicatorView.h"
-
+#import "RootNavigationBar.h"
+#import "ILTranslucentView.h"
 
 @interface RootViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
+
+
 
 
 //Attributes:
@@ -23,6 +26,7 @@
 //View:
 
 //UIViews ----------------------------------
+@property (weak, nonatomic) IBOutlet ILTranslucentView *navigationBarInstance;
 
 //UIView - Activity View - View for Activity Indicator
 @property (strong, nonatomic) IBOutlet UIView *activityIndicatorView;
@@ -45,6 +49,7 @@
 
 //UILabel - Label for Cell - Name of Each Cell
 @property (strong, nonatomic) IBOutlet UILabel *activityIndicatorLabel;
+
 
 
 //NSStrings ---------------------------------------
@@ -77,10 +82,6 @@
 
 //Methods:
 
-//Protocol ---------------------------------------
-
-//Protocol - Delegate method - method that hides the home button when the view loads
-
 //AAPullToRefresh ----------------------------------
 
 //AAPullToRefresh - Refresher Instance for the top view - Pull To Refresh Object
@@ -88,6 +89,11 @@
 
 //AAPullToRefresh - Refresher Instance for the top view - Pull To Refresh Object
 //-(void) bottomViewDidBeginRefershing: (AAPullToRefresh *) bottomView;
+
+
+//UIView ---------------------------------------
+
+
 
 //TableView ---------------------------------------
 
@@ -100,9 +106,13 @@
 //TableView - Parse - Loads the location elements from parse
 -(void)loadingAndStoringInitialLocationsFromParse:(NSArray *)locationsFromParse
                                         withError:(NSError *)error;
-
-
+//TableView - Parse - Removes the activity indidcator and calls the parse background fetching method
 -(void) findObjectInBackground;
+
+//Initilizations -------------------------------------
+-(void)initTableViewWithSettings;
+-(void)initViewWithNSCoding;
+
 
 
 //NSCoding ---------------------------------------

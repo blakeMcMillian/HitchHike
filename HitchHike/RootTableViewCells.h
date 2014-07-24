@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import "Location.h"
+#import "ILTranslucentView.h"
+
 
 @interface RootTableViewCells : UITableViewCell
 
@@ -26,7 +28,8 @@
 
 //View - Cell Content View - View that contains all of the cell's content
 @property (strong, nonatomic) IBOutlet UIView *shadowLayer;
-@property (strong, nonatomic) IBOutlet UIView *masterView;
+@property (strong, nonatomic) IBOutlet UIView *shapeLayer;
+@property (weak, nonatomic) IBOutlet ILTranslucentView *translucentView;
 
 
 //UIImageView - Image for Cell - Image of Each Location

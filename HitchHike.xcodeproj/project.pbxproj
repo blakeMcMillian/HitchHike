@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		05DB3CC68A964EB4A1C134B7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B93C7AFEFEA448048A2FC155 /* libPods.a */; };
+		633CF16D1944C9A6008B069D /* PCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 633CF16C1944C9A6008B069D /* PCRootViewController.m */; };
+		633CF1721944C9FF008B069D /* RootNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 633CF1711944C9FF008B069D /* RootNavigationBar.m */; };
+		633CF1761944F2DA008B069D /* CellBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 633CF1751944F2DA008B069D /* CellBackgroundView.m */; };
+		63FA7EDA194AB4B80005A36B /* loadingScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FA7ED9194AB4B80005A36B /* loadingScreen.png */; };
+		63FC455E1979CA810066535E /* rootTableCell.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FC455C1979CA810066535E /* rootTableCell.png */; };
+		63FC455F1979CA810066535E /* rootTableCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FC455D1979CA810066535E /* rootTableCell@2x.png */; };
+		63FC45621979CA990066535E /* rootNavigationBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FC45601979CA990066535E /* rootNavigationBar.png */; };
+		63FC45631979CA990066535E /* rootNavigationBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63FC45611979CA990066535E /* rootNavigationBar@2x.png */; };
+		63FC456E197A06B30066535E /* RootViewQueryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FC456D197A06B30066535E /* RootViewQueryManager.m */; };
+		63FC4573197ECDE70066535E /* AAPullToRefresh-2.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FC4572197ECDE70066535E /* AAPullToRefresh-2.m */; };
 		811AF68819245CF000B0F19F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811AF68719245CF000B0F19F /* Foundation.framework */; };
 		811AF68A19245CF000B0F19F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811AF68919245CF000B0F19F /* CoreGraphics.framework */; };
 		811AF68C19245CF000B0F19F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811AF68B19245CF000B0F19F /* UIKit.framework */; };
@@ -33,12 +43,8 @@
 		811AF6D519245F2F00B0F19F /* LocationCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 811AF6D419245F2F00B0F19F /* LocationCache.m */; };
 		811AF6D919245F6800B0F19F /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 811AF6D819245F6800B0F19F /* Location.m */; };
 		811AF6DD19245FA900B0F19F /* placeHolder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 811AF6DC19245FA900B0F19F /* placeHolder.jpg */; };
-		811AF6E119245FD100B0F19F /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811AF6E019245FD100B0F19F /* HomeTableViewController.m */; };
 		811AF6E519245FF200B0F19F /* RootTableViewCells.m in Sources */ = {isa = PBXBuildFile; fileRef = 811AF6E419245FF200B0F19F /* RootTableViewCells.m */; };
 		811AF6E71924618A00B0F19F /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 811AF6E61924618A00B0F19F /* Storyboard.storyboard */; };
-		811AF6ED192537C100B0F19F /* menuBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 811AF6EC192537C100B0F19F /* menuBar.png */; };
-		811AF6F219253AB900B0F19F /* searchButton1.png in Resources */ = {isa = PBXBuildFile; fileRef = 811AF6F019253AB900B0F19F /* searchButton1.png */; };
-		811AF6F319253AB900B0F19F /* searchButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = 811AF6F119253AB900B0F19F /* searchButton2.png */; };
 		81324EE91933D6B900ED1AFD /* centerIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81324EE81933D6B900ED1AFD /* centerIcon@2x.png */; };
 		81426EC0193318CF0095EDED /* launchpad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81426EBF193318CF0095EDED /* launchpad@2x.png */; };
 		814DDCBF19328033008EE160 /* RootTableViewCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814DDCBE19328033008EE160 /* RootTableViewCells.xib */; };
@@ -59,6 +65,21 @@
 
 /* Begin PBXFileReference section */
 		3B1488D425874D04B637B410 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		633CF16B1944C9A6008B069D /* PCRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCRootViewController.h; sourceTree = "<group>"; };
+		633CF16C1944C9A6008B069D /* PCRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCRootViewController.m; sourceTree = "<group>"; };
+		633CF1701944C9FF008B069D /* RootNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationBar.h; sourceTree = "<group>"; };
+		633CF1711944C9FF008B069D /* RootNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationBar.m; sourceTree = "<group>"; };
+		633CF1741944F2DA008B069D /* CellBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellBackgroundView.h; sourceTree = "<group>"; };
+		633CF1751944F2DA008B069D /* CellBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellBackgroundView.m; sourceTree = "<group>"; };
+		63FA7ED9194AB4B80005A36B /* loadingScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingScreen.png; sourceTree = "<group>"; };
+		63FC455C1979CA810066535E /* rootTableCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rootTableCell.png; sourceTree = "<group>"; };
+		63FC455D1979CA810066535E /* rootTableCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rootTableCell@2x.png"; sourceTree = "<group>"; };
+		63FC45601979CA990066535E /* rootNavigationBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rootNavigationBar.png; sourceTree = "<group>"; };
+		63FC45611979CA990066535E /* rootNavigationBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rootNavigationBar@2x.png"; sourceTree = "<group>"; };
+		63FC456C197A06B30066535E /* RootViewQueryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewQueryManager.h; sourceTree = "<group>"; };
+		63FC456D197A06B30066535E /* RootViewQueryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewQueryManager.m; sourceTree = "<group>"; };
+		63FC4571197ECDE10066535E /* AAPullToRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPullToRefresh.h; sourceTree = "<group>"; };
+		63FC4572197ECDE70066535E /* AAPullToRefresh-2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AAPullToRefresh-2.m"; sourceTree = "<group>"; };
 		811AF68419245CF000B0F19F /* HitchHike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitchHike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		811AF68719245CF000B0F19F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		811AF68919245CF000B0F19F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -90,14 +111,9 @@
 		811AF6D719245F6800B0F19F /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		811AF6D819245F6800B0F19F /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		811AF6DC19245FA900B0F19F /* placeHolder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeHolder.jpg; sourceTree = "<group>"; };
-		811AF6DF19245FD100B0F19F /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
-		811AF6E019245FD100B0F19F /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		811AF6E319245FF200B0F19F /* RootTableViewCells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableViewCells.h; sourceTree = "<group>"; };
 		811AF6E419245FF200B0F19F /* RootTableViewCells.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewCells.m; sourceTree = "<group>"; };
 		811AF6E61924618A00B0F19F /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		811AF6EC192537C100B0F19F /* menuBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuBar.png; sourceTree = "<group>"; };
-		811AF6F019253AB900B0F19F /* searchButton1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchButton1.png; sourceTree = "<group>"; };
-		811AF6F119253AB900B0F19F /* searchButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchButton2.png; sourceTree = "<group>"; };
 		81324EE81933D6B900ED1AFD /* centerIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "centerIcon@2x.png"; sourceTree = "<group>"; };
 		81426EBF193318CF0095EDED /* launchpad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchpad@2x.png"; sourceTree = "<group>"; };
 		814DDCBE19328033008EE160 /* RootTableViewCells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootTableViewCells.xib; sourceTree = "<group>"; };
@@ -146,6 +162,146 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		633B44F41974DE0400A8B848 /* navigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				63FC45601979CA990066535E /* rootNavigationBar.png */,
+				63FC45611979CA990066535E /* rootNavigationBar@2x.png */,
+			);
+			name = navigationBar;
+			sourceTree = "<group>";
+		};
+		633CF16A1944C8FA008B069D /* PaintCode */ = {
+			isa = PBXGroup;
+			children = (
+				633CF16B1944C9A6008B069D /* PCRootViewController.h */,
+				633CF16C1944C9A6008B069D /* PCRootViewController.m */,
+			);
+			name = PaintCode;
+			sourceTree = "<group>";
+		};
+		633CF16E1944C9C2008B069D /* Controller(s) */ = {
+			isa = PBXGroup;
+			children = (
+				8171E89F193186B60092C95D /* RootViewController.h */,
+				8171E8A0193186B60092C95D /* RootViewController.m */,
+				814DDCBC193268D1008EE160 /* View(s) */,
+			);
+			name = "Controller(s)";
+			sourceTree = "<group>";
+		};
+		633CF16F1944C9DF008B069D /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				633CF1701944C9FF008B069D /* RootNavigationBar.h */,
+				633CF1711944C9FF008B069D /* RootNavigationBar.m */,
+			);
+			name = NavigationBar;
+			sourceTree = "<group>";
+		};
+		633CF1731944F2B4008B069D /* CellBackgroundView */ = {
+			isa = PBXGroup;
+			children = (
+				633CF1741944F2DA008B069D /* CellBackgroundView.h */,
+				633CF1751944F2DA008B069D /* CellBackgroundView.m */,
+			);
+			name = CellBackgroundView;
+			sourceTree = "<group>";
+		};
+		63FC45511979BCA50066535E /* PullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				63FC4566197A057F0066535E /* Icon */,
+			);
+			name = PullToRefresh;
+			sourceTree = "<group>";
+		};
+		63FC45521979BD210066535E /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				814DDCBE19328033008EE160 /* RootTableViewCells.xib */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+		63FC45531979BD280066535E /* Model(s) */ = {
+			isa = PBXGroup;
+			children = (
+				633CF1731944F2B4008B069D /* CellBackgroundView */,
+				811AF6E319245FF200B0F19F /* RootTableViewCells.h */,
+				811AF6E419245FF200B0F19F /* RootTableViewCells.m */,
+			);
+			name = "Model(s)";
+			sourceTree = "<group>";
+		};
+		63FC4564197A05550066535E /* background */ = {
+			isa = PBXGroup;
+			children = (
+				63FC455C1979CA810066535E /* rootTableCell.png */,
+				63FC455D1979CA810066535E /* rootTableCell@2x.png */,
+			);
+			name = background;
+			sourceTree = "<group>";
+		};
+		63FC4565197A05670066535E /* fadeInView */ = {
+			isa = PBXGroup;
+			children = (
+				811AF6DC19245FA900B0F19F /* placeHolder.jpg */,
+			);
+			name = fadeInView;
+			sourceTree = "<group>";
+		};
+		63FC4566197A057F0066535E /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				81426EBF193318CF0095EDED /* launchpad@2x.png */,
+				81324EE81933D6B900ED1AFD /* centerIcon@2x.png */,
+			);
+			name = Icon;
+			sourceTree = "<group>";
+		};
+		63FC4567197A05B80066535E /* Nib(s) */ = {
+			isa = PBXGroup;
+			children = (
+				811AF6E219245FDB00B0F19F /* TableViewCells */,
+			);
+			name = "Nib(s)";
+			sourceTree = "<group>";
+		};
+		63FC4569197A06400066535E /* LoadingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				63FA7ED9194AB4B80005A36B /* loadingScreen.png */,
+			);
+			name = LoadingScreen;
+			sourceTree = "<group>";
+		};
+		63FC456A197A065F0066535E /* QueryManager(s) */ = {
+			isa = PBXGroup;
+			children = (
+				63FC456B197A066B0066535E /* RootViewController */,
+			);
+			name = "QueryManager(s)";
+			sourceTree = "<group>";
+		};
+		63FC456B197A066B0066535E /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				63FC456C197A06B30066535E /* RootViewQueryManager.h */,
+				63FC456D197A06B30066535E /* RootViewQueryManager.m */,
+			);
+			name = RootViewController;
+			sourceTree = "<group>";
+		};
+		63FC4574197ECE860066535E /* AAPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				63FC4571197ECDE10066535E /* AAPullToRefresh.h */,
+				63FC4572197ECDE70066535E /* AAPullToRefresh-2.m */,
+			);
+			name = AAPullToRefresh;
+			sourceTree = "<group>";
+		};
 		811AF67B19245CF000B0F19F = {
 			isa = PBXGroup;
 			children = (
@@ -245,8 +401,8 @@
 			isa = PBXGroup;
 			children = (
 				811AF6D019245EE800B0F19F /* Storyboard */,
+				633CF16A1944C8FA008B069D /* PaintCode */,
 				8171E89E193186870092C95D /* RootViewController */,
-				811AF6DA19245F8B00B0F19F /* HomeTableViewController */,
 			);
 			name = Interface;
 			sourceTree = "<group>";
@@ -262,6 +418,8 @@
 		811AF6D119245F0F00B0F19F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				63FC4574197ECE860066535E /* AAPullToRefresh */,
+				63FC456A197A065F0066535E /* QueryManager(s) */,
 				811AF6D619245F5400B0F19F /* Location */,
 				811AF6D219245F1A00B0F19F /* LocationCache */,
 			);
@@ -286,38 +444,19 @@
 			name = Location;
 			sourceTree = "<group>";
 		};
-		811AF6DA19245F8B00B0F19F /* HomeTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				811AF6DE19245FAE00B0F19F /* View */,
-			);
-			name = HomeTableViewController;
-			sourceTree = "<group>";
-		};
 		811AF6DB19245FA100B0F19F /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				81426EBF193318CF0095EDED /* launchpad@2x.png */,
-				81324EE81933D6B900ED1AFD /* centerIcon@2x.png */,
-				811AF6E9192533D700B0F19F /* View */,
+				811AF6E9192533D700B0F19F /* View(s) */,
 			);
 			name = Images;
-			sourceTree = "<group>";
-		};
-		811AF6DE19245FAE00B0F19F /* View */ = {
-			isa = PBXGroup;
-			children = (
-				811AF6DF19245FD100B0F19F /* HomeTableViewController.h */,
-				811AF6E019245FD100B0F19F /* HomeTableViewController.m */,
-			);
-			name = View;
 			sourceTree = "<group>";
 		};
 		811AF6E219245FDB00B0F19F /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				811AF6E319245FF200B0F19F /* RootTableViewCells.h */,
-				811AF6E419245FF200B0F19F /* RootTableViewCells.m */,
+				63FC45531979BD280066535E /* Model(s) */,
+				63FC45521979BD210066535E /* Interface */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -325,38 +464,37 @@
 		811AF6E8192533C600B0F19F /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				811AF6DC19245FA900B0F19F /* placeHolder.jpg */,
+				63FC4565197A05670066535E /* fadeInView */,
+				63FC4564197A05550066535E /* background */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
 		};
-		811AF6E9192533D700B0F19F /* View */ = {
+		811AF6E9192533D700B0F19F /* View(s) */ = {
 			isa = PBXGroup;
 			children = (
+				63FC4569197A06400066535E /* LoadingScreen */,
+				63FC45511979BCA50066535E /* PullToRefresh */,
+				633B44F41974DE0400A8B848 /* navigationBar */,
 				811AF6E8192533C600B0F19F /* TableViewCells */,
-				811AF6F019253AB900B0F19F /* searchButton1.png */,
-				811AF6F119253AB900B0F19F /* searchButton2.png */,
-				811AF6EC192537C100B0F19F /* menuBar.png */,
 			);
-			name = View;
+			name = "View(s)";
 			sourceTree = "<group>";
 		};
-		814DDCBC193268D1008EE160 /* View */ = {
+		814DDCBC193268D1008EE160 /* View(s) */ = {
 			isa = PBXGroup;
 			children = (
-				8171E89F193186B60092C95D /* RootViewController.h */,
-				8171E8A0193186B60092C95D /* RootViewController.m */,
-				811AF6E219245FDB00B0F19F /* TableViewCells */,
-				814DDCBE19328033008EE160 /* RootTableViewCells.xib */,
+				633CF16F1944C9DF008B069D /* NavigationBar */,
 			);
-			name = View;
+			name = "View(s)";
 			sourceTree = "<group>";
 		};
 		8171E89E193186870092C95D /* RootViewController */ = {
 			isa = PBXGroup;
 			children = (
+				633CF16E1944C9C2008B069D /* Controller(s) */,
+				63FC4567197A05B80066535E /* Nib(s) */,
 				811AF6DB19245FA100B0F19F /* Images */,
-				814DDCBC193268D1008EE160 /* View */,
 			);
 			name = RootViewController;
 			sourceTree = "<group>";
@@ -441,16 +579,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				811AF6F319253AB900B0F19F /* searchButton2.png in Resources */,
 				81426EC0193318CF0095EDED /* launchpad@2x.png in Resources */,
+				63FC455E1979CA810066535E /* rootTableCell.png in Resources */,
+				63FC45621979CA990066535E /* rootNavigationBar.png in Resources */,
 				814DDCBF19328033008EE160 /* RootTableViewCells.xib in Resources */,
-				811AF6ED192537C100B0F19F /* menuBar.png in Resources */,
 				81324EE91933D6B900ED1AFD /* centerIcon@2x.png in Resources */,
 				811AF6DD19245FA900B0F19F /* placeHolder.jpg in Resources */,
+				63FC45631979CA990066535E /* rootNavigationBar@2x.png in Resources */,
 				811AF69219245CF000B0F19F /* InfoPlist.strings in Resources */,
 				811AF69A19245CF000B0F19F /* Images.xcassets in Resources */,
-				811AF6F219253AB900B0F19F /* searchButton1.png in Resources */,
 				811AF6E71924618A00B0F19F /* Storyboard.storyboard in Resources */,
+				63FC455F1979CA810066535E /* rootTableCell@2x.png in Resources */,
+				63FA7EDA194AB4B80005A36B /* loadingScreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,9 +646,13 @@
 				8171E8A1193186B60092C95D /* RootViewController.m in Sources */,
 				811AF6D519245F2F00B0F19F /* LocationCache.m in Sources */,
 				811AF6D919245F6800B0F19F /* Location.m in Sources */,
-				811AF6E119245FD100B0F19F /* HomeTableViewController.m in Sources */,
+				633CF1761944F2DA008B069D /* CellBackgroundView.m in Sources */,
+				63FC4573197ECDE70066535E /* AAPullToRefresh-2.m in Sources */,
 				811AF6E519245FF200B0F19F /* RootTableViewCells.m in Sources */,
+				633CF16D1944C9A6008B069D /* PCRootViewController.m in Sources */,
+				63FC456E197A06B30066535E /* RootViewQueryManager.m in Sources */,
 				811AF69419245CF000B0F19F /* main.m in Sources */,
+				633CF1721944C9FF008B069D /* RootNavigationBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +783,7 @@
 				GCC_PREFIX_HEADER = "HitchHike/HitchHike-Prefix.pch";
 				INFOPLIST_FILE = "HitchHike/HitchHike-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-framework",
 					CoreLocation,
@@ -673,6 +818,7 @@
 				GCC_PREFIX_HEADER = "HitchHike/HitchHike-Prefix.pch";
 				INFOPLIST_FILE = "HitchHike/HitchHike-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-framework",
 					CoreLocation,
